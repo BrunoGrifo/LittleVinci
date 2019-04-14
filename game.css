@@ -13,42 +13,57 @@
 .container {
     position:absolute;
     display: grid;
-    grid-template-columns: [col1] 11.4vw [col2] 58vw [col3] 4vw [col4] 16vw [col5] 20vw [col6];
+    grid-template-columns: [col1] 11.4vw [col2] 3vw [col3] 22vw [col4] 10vw [col5] 23vw [col6] 4vw [col7] 16vw [col8] 20vw [col9];
     grid-template-rows: [line1] 14vh [line2] 34vh [line3] 100px [line4];
     border: 1px solid #000;
 }
 
-.item-a {
+.settings {
     grid-column: col2 / col3;
     grid-row: line2 / line3;
     border: 1px solid #000;
 }
+.settings img{
+    width: 100%;
+}
 
 
-
-.item-b {
+.lifes_a {
     float: left;
-    grid-column: col4 / col5;
+    grid-column: col7 / col8;
     grid-row: line2 / line3;
     border: 1px solid #000;
 }
 
 
 
-.item-b img {
+.lifes_a img {
     margin-left: 6%;
 }
 
 .item-c {
-    float: left;
+    grid-column: col3 / col4;
+    grid-row: line2 / line3;
+    border: 1px solid #000;
+}
+.item-c1 {
     grid-column: col4 / col5;
     grid-row: line2 / line3;
     border: 1px solid #000;
 }
+.item-c2 {
+    grid-column: col5 / col6;
+    grid-row: line2 / line3;
+    border: 1px solid #000;
+}
 
-.item-d {
-    float: left;
-    grid-column: col4 / col5;
+.item-c3 {
+    grid-column: col6 / col7;
+    grid-row: line2 / line3;
+    border: 1px solid #000;
+}
+.item-c4 {
+    grid-column: col7 / col8;
     grid-row: line2 / line3;
     border: 1px solid #000;
 }
