@@ -2,15 +2,24 @@
 <head>
 <link rel="stylesheet" type="text/css" href="game.css">
 <script src="game.js"></script>
-</head>    
+</head> 
     <body onload="init()">
         <canvas class ="draw" id="can" width="830" height="265" ></canvas>
-    
-        
+
+        <div class="container">
+            <div class='item-a'>
+                <img  src="img/definicoes.png" alt="" />
+            </div>
+
+            <div class='item-b'>
+                <img src="img/life.png" alt="" />
+                <img src="img/life.png" alt="" />
+                <img src="img/life.png" alt="" />
+            </div>
+        </div>
         
         <div >
-            <img class='board' src="background.png" alt="" />
+            <img class='board' src="img/background.png" alt="" />
         </div>
-        <input type="button" value="clear" id="clr" size="23" onclick="erase()" style="position:absolute;top:55%;left:15%;">
     </body>
     </html>
