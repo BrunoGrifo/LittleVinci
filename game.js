@@ -28,35 +28,6 @@ var canvas, ctx, flag = false,
         }, false);
     }
     
-    function color(obj) {
-        switch (obj.id) {
-            case "green":
-                x = "green";
-                break;
-            case "blue":
-                x = "blue";
-                break;
-            case "red":
-                x = "red";
-                break;
-            case "yellow":
-                x = "yellow";
-                break;
-            case "orange":
-                x = "orange";
-                break;
-            case "black":
-                x = "black";
-                break;
-            case "white":
-                x = "white";
-                break;
-        }
-        if (x == "white") y = 14;
-        else y = 2;
-    
-    }
-    
     function draw() {
         ctx.beginPath();
         ctx.moveTo(prevX, prevY);
