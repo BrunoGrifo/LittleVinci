@@ -5,7 +5,7 @@
     top: 0;
     left: 0;
     overflow: hidden;
-    background: rgb(230, 230, 230);
+    /* background: rgb(230, 230, 230); */
 }
 
 
@@ -13,7 +13,7 @@
     position:absolute;
     display: grid;
     grid-template-columns: [col1] 7vw [col2] 3vw [col3] 24vw [col4] 10vw [col5] 20vw [col6] 7vw [col7];
-    grid-template-rows: [line1] 7.4vh [line2] 5.5vh [line3] 71.5vh [line4] 6.8vh [line5];
+    grid-template-rows: [line1] 56vh [line2] 5.5vh [line3] 22.8vh [line4] 6.8vh [line5];
     
 }
 
@@ -29,7 +29,8 @@
     grid-column: col2 / col3;
     grid-row: line2 / line3;
     z-index: 2;
-    border: 1px solid #000;
+    /* border: 1px solid #000; */
+    /* border: 1px solid #000; */
 }
 .settings img{
     width: 100%;
@@ -40,7 +41,7 @@
     grid-column: col4 / col5;
     grid-row: line4 / line5;
     z-index: 2;
-    border: 1px solid #000;
+    /*border: 1px solid #000;*/
 }
 
 .done img{
@@ -53,7 +54,7 @@
     grid-column: col6 / col7;
     grid-row: line2 / line3;
     z-index: 2;
-    border: 1px solid #000;
+    /*border: 1px solid #000;*/
 }
 
 .erase img{
@@ -66,7 +67,7 @@
     position:absolute;
     display: grid;
     grid-template-columns: [c1] 74vw [c2] 18vw [c3];
-    grid-template-rows: [l1] 10vh [l2] 38vh [l3];
+    grid-template-rows: [l1] 60vh [l2] 30vh [l3];
     
 }
 
@@ -75,7 +76,7 @@
     grid-column: c2 / c3;
     grid-row: l2 / l3;
     z-index: 2;
-    border: 1px solid #000;
+    /*border: 1px solid #000;*/
 }
 
 .lifes_a .lifes {
@@ -84,12 +85,14 @@
 }
 
 .lifes_a .help {
-    margin-left: 37%;
+    margin-left: 15%;
+    margin-top: 10%;
     width: 25%
 }
 
 .lifes_a .desc_help {
-    margin-left: 20%;
-    width: 60%
+    margin-left: 0%;
+    margin-left: 2%;
+    width: 45%
 }
 
