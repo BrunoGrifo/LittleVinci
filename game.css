@@ -12,16 +12,12 @@
 .containerCanvas {
     position:absolute;
     display: grid;
-    grid-template-columns: [col1] 7vw [col2] 3vw [col3] 24vw [col4] 10vw [col5];
+    grid-template-columns: [col1] 7vw [col2] 3vw [col3] 24vw [col4] 10vw [col5] 20vw [col6] 7vw [col7];
     grid-template-rows: [line1] 7.4vh [line2] 5.5vh [line3] 71.5vh [line4] 6.8vh [line5];
     
 }
 
-.canvas{
-    grid-column-start: col2;
-    z-index: 1;
-    border: 1px solid #000;
-}
+
 .draw{
     position:absolute;
     z-index: 1;
@@ -50,4 +46,18 @@
 .done img{
     width: 100%;
     height: 100%;   
+}
+
+.erase{
+    float: left;
+    grid-column: col6 / col7;
+    grid-row: line2 / line3;
+    z-index: 2;
+    border: 1px solid #000;
+}
+
+.erase img{
+    width: 40%;
+    height: 100%;
+    margin-right: 6%; 
 }
