@@ -1,4 +1,53 @@
 .board{
     height: 100vh;
     width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    background: rgb(230, 230, 230);
+}
+
+
+.containerCanvas {
+    position:absolute;
+    display: grid;
+    grid-template-columns: [col1] 7vw [col2] 3vw [col3] 24vw [col4] 10vw [col5];
+    grid-template-rows: [line1] 7.4vh [line2] 5.5vh [line3] 71.5vh [line4] 6.8vh [line5];
+    
+}
+
+.canvas{
+    grid-column-start: col2;
+    z-index: 1;
+    border: 1px solid #000;
+}
+.draw{
+    position:absolute;
+    z-index: 1;
+    top: 7.4vh;
+    left: 7.4vw;
+}
+
+.settings {
+    grid-column: col2 / col3;
+    grid-row: line2 / line3;
+    z-index: 2;
+    border: 1px solid #000;
+}
+.settings img{
+    width: 100%;
+    height: 100%;
+}
+
+.done {
+    grid-column: col4 / col5;
+    grid-row: line4 / line5;
+    z-index: 2;
+    border: 1px solid #000;
+}
+
+.done img{
+    width: 100%;
+    height: 100%;   
 }
