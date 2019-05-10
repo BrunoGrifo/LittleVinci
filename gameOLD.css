@@ -1,0 +1,149 @@
+.board{
+    height: 100vh;
+    width: 100vw;
+}
+
+.draw{
+    position:absolute;
+    top:15vh;
+    left:12vw;
+
+}
+
+.container {
+    position:absolute;
+    display: grid;
+    grid-template-columns: [col1] 11.4vw [col2] 3vw [col3] 22vw [col4] 10vw [col5] 23vw [col6] 4vw [col7] 16vw [col8] auto [col9];
+    grid-template-rows: [line1] 14vh [line2] 5vh [line3] 23vh [line4] 6vh [line5] 2.8vh [line6] 3vh [line7] 28vh [line8] 4vh [line8];
+    
+}
+
+.settings {
+    grid-column: col2 / col3;
+    grid-row: line2 / line3;
+    z-index: 2;
+}
+.settings img{
+    width: 100%;
+}
+
+
+.lifes_a {
+    float: left;
+    grid-column: col7 / col8;
+    grid-row: line2 / line5;
+}
+
+
+
+.lifes_a .lifes {
+    margin-left: 6%;
+    width: 23%;
+}
+
+.lifes_a .help {
+    margin-left: 32%;
+    width: 35%
+}
+.lifes_a p {
+    text-align: center;
+    margin-top: 0%;
+}
+
+.canvas{
+    grid-column: col2 / col6;
+    grid-row: line2 / line5;
+    z-index: 1;
+}
+
+.done {
+    grid-column: col4 / col5;
+    grid-row: line4 / line5;
+    z-index: 2;
+}
+
+.done img{
+    width: 100%;
+   
+}
+
+.settingsTwo{
+    grid-column: col2 / col3;
+    grid-row: line6 / line7;
+    z-index: 2;
+}
+.settingsTwo img{
+    width: 100%;
+}
+
+.lifes_b {
+    float: left;
+    grid-column: col7 / col8;
+    grid-row: line7 / line8;
+}
+
+
+
+.lifes_b .lifes {
+    margin-left: 6%;
+    width: 23%;
+}
+
+.lifes_b .help {
+    margin-left: 32%;
+    width: 35%
+}
+.lifes_b p {
+    text-align: center;
+    margin-top: 0%;
+}
+.doneTwo {
+    grid-column: col4 / col5;
+    grid-row: line8 / line9;
+    z-index: 2;
+}
+.doneTwo img{
+    width: 100%;
+   
+}
+
+
+
+
+
+
+
+.item-c2 {
+    grid-column: col5 / col6;
+    grid-row: line2 / line3;
+    border: 1px solid #000;
+}
+
+
+.item-c3 {
+    grid-column: col6 / col7;
+    grid-row: line2 / line3;
+    border: 1px solid #055;
+}
+.item-c4 {
+    grid-column: col7 / col8;
+    grid-row: line2 / line3;
+    border: 1px solid #fff;
+}
+
+.item-c5 {
+    grid-column: col2 / col8;
+    grid-row: line3 / line4;
+    border: 1px solid #0A0;
+}
+.item-c6 {
+    grid-column: col2 / col8;
+    grid-row: line4 / line5;
+    border: 1px solid rgb(255, 251, 0);
+}
+
+.item-c7 {
+    grid-column: col2 / col8;
+    grid-row: line7 / line8;
+    border: 1px solid #A0A;
+}
