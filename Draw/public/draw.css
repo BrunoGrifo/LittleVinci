@@ -1,0 +1,94 @@
+.board{
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    /* background: rgb(230, 230, 230); */
+}
+
+
+.containerCanvas {
+    position:absolute;
+    display: grid;
+    grid-template-columns: [col1] 7vw [col2] 3vw [col3] 24vw [col4] 10vw [col5] 20vw [col6] 7vw [col7];
+    grid-template-rows: [line1] 7.4vh [line2] 5.5vh [line3] 71.5vh [line4] 6.8vh [line5];
+
+}
+
+
+.draw{
+    position:absolute;
+    z-index: 1;
+    /*top: 7.4vh;
+    left: 7.4vw;*/
+}
+
+.settings {
+    grid-column: col2 / col3;
+    grid-row: line2 / line3;
+    z-index: 2;
+    /* border: 1px solid #000; */
+}
+.settings img{
+    width: 100%;
+    height: 100%;
+}
+
+.done {
+    grid-column: col4 / col5;
+    grid-row: line4 / line5;
+    z-index: 2;
+    /* border: 1px solid #000; */
+}
+
+.done img{
+    width: 100%;
+    height: 100%;
+}
+
+.erase{
+    float: left;
+    grid-column: col6 / col7;
+    grid-row: line2 / line3;
+    z-index: 2;
+    /* border: 1px solid #000; */
+}
+
+.erase img{
+    width: 40%;
+    height: 100%;
+    margin-right: 6%;
+}
+
+.containerControlPanel {
+    position:absolute;
+    display: grid;
+    grid-template-columns: [c1] 74vw [c2] 18vw [c3];
+    grid-template-rows: [l1] 10vh [l2] 38vh [l3];
+
+}
+
+.lifes_a {
+    float: left;
+    grid-column: c2 / c3;
+    grid-row: l2 / l3;
+    z-index: 2;
+    /* border: 1px solid #000; */
+}
+
+.lifes_a .lifes {
+    margin-left: 10%;
+    width: 18%;
+}
+
+.lifes_a .help {
+    margin-left: 37%;
+    width: 25%
+}
+
+.lifes_a .desc_help {
+    margin-left: 20%;
+    width: 60%
+}
