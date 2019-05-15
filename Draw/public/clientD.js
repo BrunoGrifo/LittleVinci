@@ -1,4 +1,7 @@
+
+
 document.addEventListener("DOMContentLoaded", function() {
+   
    var mouse = {
       click: false,
       move: false,
@@ -8,10 +11,10 @@ document.addEventListener("DOMContentLoaded", function() {
    // get canvas element and create context
    var canvas  = document.getElementById('drawing');
    var context = canvas.getContext('2d');
+   var erase = document.getElementById('erase');
    var width   = window.innerWidth;
    var height  = window.innerHeight;
    var socket  = io.connect();
-
    // set canvas to full browser width/height
    //canvas.width = width;
    //canvas.height = height;
@@ -26,6 +29,11 @@ document.addEventListener("DOMContentLoaded", function() {
       mouse.pos.y = e.clientY / canvas.height;
       mouse.move = true;
    };
+
+   erase.onmousedown = function(e){
+      context.clearRect(0, 0, canvas.width, canvas.height);
+   }
+
 
    // draw line received from server
 	socket.on('draw_line', function (data) {
@@ -47,5 +55,6 @@ document.addEventListener("DOMContentLoaded", function() {
       mouse.pos_prev = {x: mouse.pos.x, y: mouse.pos.y};
       setTimeout(mainLoop, 25);
    }
+   
    mainLoop();
 });
