@@ -1,0 +1,40 @@
+.board{
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    /* background: rgb(230, 230, 230); */
+}
+
+.container {
+    position:absolute;
+    display: grid;
+    grid-template-columns: [col1] 18vw [col2] 25vw [col3] 10vw [col4] 25vw [col5];
+    grid-template-rows: [line1] 32vh [line2] 30vh [line3];
+}
+
+#button{
+    border: 0 none; 
+    outline: 0;
+}
+.draw {
+    grid-column: col2 / col3;
+    grid-row: line2 / line3;
+    /* border: 1px solid #000; */
+}
+.draw input{
+    height: 80%;
+    width: 100%;
+}
+.guess {
+    grid-column: col4 / col5;
+    grid-row: line2 / line3;
+    /* border: 1px solid #000; */
+}
+.guess input{
+    width: 100%;
+    height: 80%;
+}
+
