@@ -18,9 +18,12 @@ function main() {
   menuP.addEventListener("click", menu);
 
   //Botão das instruções do menu
-//   btn = document.getElementById("myBtn");
-//   btn.addEventListener("click", instru);
-  
+  btn = document.getElementById("myBtn");
+  btn.addEventListener("click", instru);
+
+  //Botão de leave do menu
+  leaveBtn =  document.getElementById("leaveBtn");
+  leaveBtn.addEventListener("click", leave);
   
 
  
@@ -34,9 +37,10 @@ function main() {
 
 }
     // When the user clicks the button, open the modal 
-//   function instru() {
-//     modal.style.display = "block";
-//   }
+  function instru() {
+    menuRender.style.display = "none";
+    modal.style.display = "block";
+  }
   
   function ctn() {
     modal.style.display = "none";
@@ -44,6 +48,10 @@ function main() {
   
   function menu() {
     menuRender.style.display = "block";
+  }
+
+  function leave(){
+    var m = confirm("Are you sure you want to leave the game?");
   }
   
 //   function () {
