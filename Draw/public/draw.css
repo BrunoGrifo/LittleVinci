@@ -12,7 +12,7 @@
 .containerCanvas {
     position:absolute;
     display: grid;
-    grid-template-columns: [col1] 7vw [col2] 3vw [col3] 24vw [col4] 10vw [col5] 20vw [col6] 7vw [col7];
+    grid-template-columns: [col1] 7vw [col2] 3vw [col3] 24vw [col4] 10vw [col5] 23vw [col6] 7vw [col7];
     grid-template-rows: [line1] 7.4vh [line2] 5.5vh [line3] 71.5vh [line4] 6.8vh [line5];
 
 }
@@ -31,9 +31,13 @@
     z-index: 2;
     /* border: 1px solid #000; */
 }
-.settings img{
+.settings input{
     width: 100%;
     height: 100%;
+}
+.settings #menuP{
+    border: 0 none; 
+    outline: 0;
 }
 
 .done {
@@ -60,6 +64,8 @@
     width: 40%;
     height: 100%;
     margin-right: 6%;
+    border: 0 none; 
+    outline: 0;
 }
 
 .containerControlPanel {

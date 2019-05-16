@@ -1,16 +1,20 @@
 <html>
 <head>
 <link rel="stylesheet" type="text/css" href="draw.css">
+<link rel="stylesheet" type="text/css" href="popupCSS.css">
 <script src="socket.io/socket.io.js"></script>
 <script src="clientD.js"></script>
+<script src="popup.js"></script>
 </head>
 
 <body>
-    <canvas class ="draw" id="drawing" width="950" height="828"></canvas>
+    <canvas class ="draw" id="drawing" width="950" height="728"></canvas>
     <div class="containerCanvas">
 
         <div class='settings'>
-            <img  src="img/definicoes.png" alt="Settings" />
+            <!-- <img  src="img/definicoes.png" alt="Settings" /> -->
+            <input id="menuP" type="image" src="img/definicoes.png" alt="Draw_Submit" />
+
         </div>
 
         <div class='done'>
@@ -45,6 +49,53 @@
     <div >
         <img class='board' src="img/draw_board.png" alt="" />
     </div>
+
+    
+    <!-- POPUP content -->
+    <div id="myModal" class="modal">
+        <div class="containerPos">
+
+            <div class="modal-content">
+                <img src="img/draw_intro.png" alt="Instrucions" />
+            </div>
+
+            <div class="continue">
+                <input id="closeBtn" type="image" src="img/continue_intro.png" alt="Intro_Submit" />
+            </div>
+
+        </div>
+
+    </div>
+
+    <div id="menuDef" class="modal">
+            <div class="containerMenu">
+    
+                <div class="menuDef-content">
+                    <img src="img/menu-fundo.png" alt="Instrucions" />
+                </div>
+    
+                <div class="menuMenu">
+                    <input id="" type="image" size="1" src="img/menu-menu.png" alt="Intro_Submit" />
+                </div>
+                
+                <div class="menuRestart">
+                        <input id="" type="image" src="img/menu-restart.png" alt="Intro_Submit" />
+                </div>
+
+                <div class="menuLeave">
+                    <input id="" type="image" src="img/menu-leave.png" alt="Intro_Submit" />
+                </div>
+
+                <div class="menuInstru">
+                        <input id="" type="image" src="img/menu-instru.png" alt="Intro_Submit" />
+                </div>
+                <div class="containerMenuX">
+                <div class="menuX">
+                        <input id="" type="image" src="img/menu-x.png" alt="Intro_Submit" />
+                </div>
+                </div>
+    
+        </div>
 
 </body>
 </html>

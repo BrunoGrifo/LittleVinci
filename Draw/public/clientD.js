@@ -1,5 +1,3 @@
-
-
 document.addEventListener("DOMContentLoaded", function() {
    
    var mouse = {
@@ -31,7 +29,10 @@ document.addEventListener("DOMContentLoaded", function() {
    };
 
    erase.onmousedown = function(e){
-      context.clearRect(0, 0, canvas.width, canvas.height);
+      var m = confirm("Are you sure you want to erase everything?");
+        if (m) {
+            context.clearRect(0, 0, canvas.width, canvas.height);
+        }
    }
 
 
