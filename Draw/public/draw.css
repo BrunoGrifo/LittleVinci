@@ -89,7 +89,7 @@
     width: 18%;
 }
 
-.lifes_a .help {
+.lifes_a .help input{
     margin-left: 37%;
     width: 25%
 }

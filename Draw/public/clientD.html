@@ -5,6 +5,7 @@
 <script src="socket.io/socket.io.js"></script>
 <script src="clientD.js"></script>
 <script src="popup.js"></script>
+<script src="music.js"></script>
 </head>
 
 <body>
@@ -33,13 +34,23 @@
     <div class="containerControlPanel">
 
         <div class='lifes_a'>
-            <img class='lifes' src="img/life.png" alt="" />
-            <img class='lifes' src="img/life.png" alt="" />
-            <img class='lifes' src="img/life.png" alt="" />
-            <img class='help' src="img/play.png" alt="" />
-            <img class='desc_help' src="img/desc_play.png" alt="" />
-            <img class='help' src="img/pass.png" alt="" />
-            <img class='desc_help' src="img/desc_pass.png" alt="" />
+            <img class='lifes' src="img/life.png" alt="life" />
+            <img class='lifes' src="img/life.png" alt="life" />
+            <img class='lifes' src="img/life.png" alt="life" />
+
+            <div class='help'>
+                <!-- <img src="img/play.png" alt="play" /> -->
+                <input id="playBtn" type="image" src="img/play.png" alt="play" />
+            </div>
+
+            <img class='desc_help' src="img/desc_play.png" alt="play_desc" />
+
+            <div class='help'>
+                <!-- <img src="img/pass.png" alt="pass" /> -->
+                <input id="passBtn" type="image" src="img/pass.png" alt="pass" />
+            </div>
+            
+            <img class='desc_help' src="img/desc_pass.png" alt="pass_desc" />
         </div>
     </div>
 
@@ -97,7 +108,15 @@
                 </div>
                 </div>
     
-        </div>
+    </div>
+
+    <!-- <div id="" class="modal">
+        
+        <div class="containerMenu">
+
+    
+    </div> -->
+
 
 </body>
 </html>
