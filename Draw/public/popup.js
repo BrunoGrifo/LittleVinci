@@ -1,4 +1,4 @@
-var modal, btn, span, menuP;
+var modal, btn, span, menuP, menuX;
 (function()
 {	
 	window.addEventListener("load", main);
@@ -24,6 +24,10 @@ function main() {
   //Botão de leave do menu
   leaveBtn =  document.getElementById("leaveBtn");
   leaveBtn.addEventListener("click", leave);
+
+  //Botão de sair do manu
+  menuX = document.getElementById("menuX");
+  menuX.addEventListener("click",exitMenu);
   
 
  
@@ -49,7 +53,9 @@ function main() {
   function menu() {
     menuRender.style.display = "block";
   }
-
+  function exitMenu() {
+    menuRender.style.display = "none";
+  }
   function leave(){
     var m = confirm("Are you sure you want to leave the game?");
   }

@@ -27,8 +27,11 @@ app.route('/draw')
     app.get('/word',function (req, res) {
         console.log("hello:"+String(req.query));
     		//res.sendFile(__dirname+'/clientG.html');
-    	});
-
+       });
+       
+app.route('/menu').get(function (req, res) {
+   res.sendFile(__dirname+'/index.html');
+});
       
 // array of all lines drawn
 var line_history = [];
