@@ -5,6 +5,7 @@
 <script src="socket.io/socket.io.js"></script>
 <script src="clientD.js"></script>
 <script src="popup.js"></script>
+<script src="music.js"></script>
 </head>
 
 <body>
@@ -33,13 +34,23 @@
     <div class="containerControlPanel">
 
         <div class='lifes_a'>
-            <img class='lifes' src="img/life.png" alt="" />
-            <img class='lifes' src="img/life.png" alt="" />
-            <img class='lifes' src="img/life.png" alt="" />
-            <img class='help' src="img/play.png" alt="" />
-            <img class='desc_help' src="img/desc_play.png" alt="" />
-            <img class='help' src="img/pass.png" alt="" />
-            <img class='desc_help' src="img/desc_pass.png" alt="" />
+            <img class='lifes' src="img/life.png" alt="life" />
+            <img class='lifes' src="img/life.png" alt="life" />
+            <img class='lifes' src="img/life.png" alt="life" />
+
+            <div class='help'>
+                <!-- <img src="img/play.png" alt="play" /> -->
+                <input id="playBtn" type="image" src="img/play.png" alt="play" />
+            </div>
+
+            <img class='desc_help' src="img/desc_play.png" alt="play_desc" />
+
+            <div class='help'>
+                <!-- <img src="img/pass.png" alt="pass" /> -->
+                <input id="passBtn" type="image" src="img/pass.png" alt="pass" />
+            </div>
+            
+            <img class='desc_help' src="img/desc_pass.png" alt="pass_desc" />
         </div>
     </div>
 
@@ -75,7 +86,9 @@
                 </div>
     
                 <div class="menuMenu">
-                    <input id="" type="image" size="1" src="img/menu-menu.png" alt="Intro_Submit" />
+                    <form action="/menu" method="GET">
+                        <input id="" type="image" size="1" src="img/menu-menu.png" alt="Intro_Submit" />
+                    </form>
                 </div>
                 
                 <div class="menuRestart">
@@ -90,12 +103,53 @@
                         <input id="myBtn" type="image" src="img/menu-instru.png" alt="Intro_Submit" />
                 </div>
                 <div class="containerMenuX">
-                <div class="menuX">
-                        <input id="" type="image" src="img/menu-x.png" alt="Intro_Submit" />
+                    <div class="menuX">
+                        <input id="menuX" type="image" src="img/menu-x.png" alt="Intro_Submit" />
+                    </div>
                 </div>
-                </div>
-    
         </div>
+    
+    </div>
+
+    <div id="playSound" class="modal">
+        
+        <div class="containerSound">
+                <div class="containerSound-board">
+                        <img src="img/sound-board.png" alt="Instrucions" />
+                </div>
+
+                <div id="playAgain">
+                    <div class="containerSound">
+                        <div class="containerSound-PA">
+                            <input id="soundPlayBtn" type="image" src="img/sound-play-sound.png" alt="Intro_Submit" />
+                        </div>
+
+                        <div class="containerSound-done">
+                                <input id="passChose" type="image" src="img/pass.png" alt="Instrucions" />
+                                <input id="soundChose" type="image" src="img/sound-check.png" alt="Instrucions" />
+                        </div>
+                    </div>
+                </div>
+
+                <div id="inputDraw">
+                    <div class="containerSound">
+                        <div class="containerSound-D">
+                            <input type="text" placeholder="What are you Drawing?"/>
+                        </div>
+
+                        <!-- RUI VENTURA BOTÂO PARA ENVIAR PALAVRA PARA A SOPA DE LETRAS -->
+                        <div class="containerSound-done">
+                            <input id="soundChose2" type="image" src="img/sound-check.png" alt="Instrucions" />
+                        </div>
+                    </div>
+                </div>
+
+                
+
+        </div>
+
+    </div>
+
 
 </body>
 </html>
