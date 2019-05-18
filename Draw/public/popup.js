@@ -33,9 +33,12 @@ function main() {
   menuX = document.getElementById("menuX");
   menuX.addEventListener("click",exitMenu);
   
-  //Botão de escolher musica
-  soundChose = document.getElementById("soundChose");
-  soundChose.addEventListener("click",writeDrawName);
+  if (window.location.pathname == '/clienteD.html'){
+    //Botão de escolher musica
+    soundChose = document.getElementById("soundChose");
+    soundChose.addEventListener("click",writeDrawName);
+  }
+  
 
   modal.style.display = "block";
 
