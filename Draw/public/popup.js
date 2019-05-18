@@ -34,6 +34,7 @@ function main() {
   menuX.addEventListener("click",exitMenu);
 
 
+
   if (window.location.pathname == '/draw'){
     //Botão de escolher musica
     //console.log("estou a escolher o som"+window.location.pathname);
@@ -74,6 +75,7 @@ function main() {
     playAgain.style.display = "none";
     inputDraw.style.display = "block";
   }
+
 
 
 

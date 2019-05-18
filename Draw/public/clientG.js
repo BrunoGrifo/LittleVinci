@@ -104,7 +104,7 @@ $(function(){
           }
         }
         console.log(finalword);
-        data = 'guess='+finalword;
+        var data = 'guess='+finalword;
         $.get('/word', data, function(result) {
             if(result.valid == false)
             {

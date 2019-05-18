@@ -59,3 +59,25 @@ document.addEventListener("DOMContentLoaded", function() {
 
    mainLoop();
 });
+
+
+
+$(function(){
+         $('#soundChose2').click(function(e) {
+             e.preventDefault();
+             var data = 'guess='+$('#wordToDraw').val();;
+             $.get('/insert', data, function(result) {
+                 if(result.valid == false)
+                 {
+                    console.log('you suck');
+                     //window.location.href = '/something';
+                 }
+                 else
+                 {
+                    $('#playSound').hide(result);
+                     $('#inputDraw').hide(result);
+                     console.log('depois do popup');
+                 }
+               });
+            });
+          });

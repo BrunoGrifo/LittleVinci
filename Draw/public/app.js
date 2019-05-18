@@ -30,13 +30,27 @@ app.route('/menu').get(function (req, res) {
    res.sendFile(__dirname+'/index.html');
 });
 
-//Insert Word =================================
+let palavra;
+    //Insert Word FROM DRAW PERSPECTIVE =================================
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({extended: true}));
+app.get('/insert', function(req, res, next) {
+   palavra = req.query.guess;
+      return res.send({ valid: true });
+    //console.log(util.inspect(req, false, null));
+
+
+});
+
+
+
+//Insert Word FROM GUESS PERSPECTIVE=================================
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 app.get('/word', function(req, res, next) {
   var guess = req.query.guess;
   console.log("hello:"+guess);
-  if(guess == "bosta"){
+  if(guess == palavra){
     return res.send({ valid: true });
   }
   else{
