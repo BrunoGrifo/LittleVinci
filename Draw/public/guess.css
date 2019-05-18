@@ -13,8 +13,7 @@
     position:absolute;
     display: grid;
     grid-template-columns: [col1] 7vw [col2] 3vw [col3] 24vw [col4] 10vw [col5] 20vw [col6] 7vw [col7];
-    grid-template-rows: [line1] 56vh [line2] 5.5vh [line3] 22.8vh [line4] 6.8vh [line5];
-    
+    grid-template-rows: [line1] 56vh [line2] 5.5vh [line3] 22.8vh [line4] 6.8vh [line5];   
 }
 
 
@@ -96,3 +95,26 @@
     width: 45%
 }
 
+
+/* CSS PARA AS CENAS DA SOPA DE LETRAS */
+
+.containerLetters{
+    position:absolute;
+    display: grid;
+    grid-template-columns: [cl1] 12vw [cl2] 56vw [cl3];
+    grid-template-rows: [ln1] 59vh [ln2] 16vh [ln3] 2vh [ln4] 5vh [ln5];   
+}
+
+.sopa{
+    grid-column: cl2 / cl3;
+    grid-row: ln2 / ln3;
+    z-index: 2;
+    border: 2px solid rgb(255, 255, 255);
+}
+
+.word{
+    grid-column: cl2 / cl3;
+    grid-row: ln4 / ln5;
+    z-index: 2;
+    border: 2px solid rgb(255, 255, 255);
+}
