@@ -34,8 +34,9 @@ function main() {
   menuX.addEventListener("click",exitMenu);
 
 
-  if (window.location.pathname == '/clienteD.html'){
+  if (window.location.pathname == '/draw'){
     //Botão de escolher musica
+    //console.log("estou a escolher o som"+window.location.pathname);
     soundChose = document.getElementById("soundChose");
     soundChose.addEventListener("click",writeDrawName);
   }
@@ -69,6 +70,7 @@ function main() {
   }
 
   function writeDrawName(){
+    console.log("mudo de modal");
     playAgain.style.display = "none";
     inputDraw.style.display = "block";
   }
