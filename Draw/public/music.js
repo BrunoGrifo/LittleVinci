@@ -1,9 +1,11 @@
-var playBtn, passBtn, audio;
+var playBtn, passBtn, audio, passChose, soundPlayBtn;
+var modal, menuRender,sound, playAgain, inputDraw;
 var songs = ["1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20","21","22","23"];
 var i;
 var rand;
 var SN = 22;
 var name;
+var flag1,flag2;
 
 
 (function()
@@ -16,18 +18,39 @@ var name;
 }());
 
 function main(){
+    modal = document.getElementById("myModal");
+    sound = document.getElementById("playSound");
+    menuRender = document.getElementById("menuDef");
+    playAgain = document.getElementById("playAgain");
+    inputDraw = document.getElementById("inputDraw");
+    
     //Play button
-    playBtn = document.getElementById("playBtn");;
+    playBtn = document.getElementById("playBtn");
     playBtn.addEventListener("click", replay);
 
-    //Play button
-    passBtn = document.getElementById("passBtn");;
+    //Pass button
+    passBtn = document.getElementById("passBtn");
     passBtn.addEventListener("click", next);
+
+    //PassChose button
+    passChose = document.getElementById("passChose");
+    passChose.addEventListener("click", passSound);
+    
+    //PassChose button
+    soundPlayBtn = document.getElementById("soundPlayBtn");
+    soundPlayBtn.addEventListener("click", replay);
 }
 
 function replay(){
-    audio = new Audio('sounds/'+name+'.mp3');
-    audio.play();
+    if (window.getComputedStyle(modal).display === "block") {
+        // Do something..
+    }else{
+        audio = new Audio('sounds/'+name+'.mp3');
+        audio.play();
+    }
+    // audio = new Audio('sounds/'+name+'.mp3');
+    // audio.play();
+    
 }
 
 function next(){
@@ -42,4 +65,10 @@ function next(){
         console.log(name);
         SN--;
     }
+}
+
+function passSound(){
+    console.log("entra");
+    next();
+    replay();
 }

@@ -1,13 +1,17 @@
-var modal, btn, span, menuP, menuX;
+var modal, btn, span, menuP, menuX, menuRender,sound, playAgain, inputDraw, soundChose ;
+
 (function()
 {	
-	window.addEventListener("load", main);
+    window.addEventListener("load", main);
 
 }());
 
 function main() {
   modal = document.getElementById("myModal");
+  sound = document.getElementById("playSound");
   menuRender = document.getElementById("menuDef");
+  playAgain = document.getElementById("playAgain");
+  inputDraw = document.getElementById("inputDraw");
   
   //Continuar nas instruções
   span = document.getElementById("closeBtn");;
@@ -29,14 +33,14 @@ function main() {
   menuX = document.getElementById("menuX");
   menuX.addEventListener("click",exitMenu);
   
+  //Botão de escolher musica
+  soundChose = document.getElementById("soundChose");
+  soundChose.addEventListener("click",writeDrawName);
+
+  modal.style.display = "block";
 
  
 //   menuPC.addEventListener("click", menuClose);
-
-
-
-    modal.style.display = "block";
-
 //   window.addEventListener("click", fora);
 
 }
@@ -48,6 +52,9 @@ function main() {
   
   function ctn() {
     modal.style.display = "none";
+    inputDraw.style.display = "none";
+    playAgain.style.display = "block";
+    sound.style.display = "block"; 
   }
   
   function menu() {
@@ -56,6 +63,15 @@ function main() {
   function exitMenu() {
     menuRender.style.display = "none";
   }
+
+  function writeDrawName(){
+    playAgain.style.display = "none"; 
+    inputDraw.style.display = "block";   
+  }
+
+
+
+
   function leave(){
     var m = confirm("Are you sure you want to leave the game?");
   }
@@ -69,4 +85,6 @@ function main() {
 //     if (event.target == modal) {
 //       modal.style.display = "none";
 //     }
-//   }
+// }
+
+

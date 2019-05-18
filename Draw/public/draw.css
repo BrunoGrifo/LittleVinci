@@ -91,7 +91,9 @@
 
 .lifes_a .help input{
     margin-left: 37%;
-    width: 25%
+    width: 25%;
+    border: 0 none; 
+    outline: 0;
 }
 
 .lifes_a .desc_help {

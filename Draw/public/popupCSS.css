@@ -143,3 +143,79 @@
     outline: 0;
     /* border: 1px solid #000; */
 }
+
+
+.containerSound {
+    position:absolute;
+    display: grid;
+    grid-template-columns: [cl1] 33vw [cl2] 2vw [cl3] 4vw [cl4] 18vw [cl5] 5vw [cl6] 4vw [cl7] 3vw [cl8];
+    grid-template-rows: [ln1] 30vh [ln2] 7vh [ln3] 9vh [ln4] 1vh [ln5] 7.4vh [ln6];
+}
+
+.containerSound-board{
+    grid-column: cl2 / cl8;
+    grid-row: ln2 / ln5;
+    z-index: 3;
+    /* border: 1px solid #000; */
+}
+
+.containerSound-done{
+    float: left;
+    grid-column: cl5 / cl7;
+    grid-row: ln5/ ln6;
+    z-index: 3;
+    /* border: 1px solid #000; */
+}
+
+.containerSound-PA{
+    grid-column: cl4 / cl6;
+    grid-row: ln3 / ln4;
+    z-index: 3;
+    /* border: 1px solid #000; */
+}
+.containerSound-D{
+    background-image:url(img/sound-write.png) ;
+    background-position:left;   
+    background-repeat:no-repeat;
+    background-size: 100%;
+    text-align: center;
+    grid-column: cl4 / cl6;
+    grid-row: ln3 / ln4;
+    z-index: 3;
+    /* border: 1px solid rgb(255, 255, 255);  */
+}
+input[type="text"]{
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 150%;
+    /* color: white; */
+}
+
+.containerSound-board img{
+    width: 100%;
+}
+
+.containerSound-D input{
+    padding-top: 7%;
+    padding-left: 2%;
+    width: 75%;
+}
+.containerSound-PA input{
+    width: 100%;
+    border: 0 none; 
+    outline: 0;
+}
+
+.containerSound-done input{
+    width: 48.4%;
+    border: 0 none; 
+    outline: 0;
+}
+
+.containerSound-done #soundChose2{
+    float: right;
+    
+}
+
+
