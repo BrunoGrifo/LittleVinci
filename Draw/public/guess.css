@@ -13,7 +13,7 @@
     position:absolute;
     display: grid;
     grid-template-columns: [col1] 7vw [col2] 3vw [col3] 24vw [col4] 10vw [col5] 20vw [col6] 7vw [col7];
-    grid-template-rows: [line1] 56vh [line2] 5.5vh [line3] 22.8vh [line4] 6.8vh [line5];   
+    grid-template-rows: [line1] 56vh [line2] 5.5vh [line3] 22.8vh [line4] 6.8vh [line5];
 }
 
 
@@ -45,7 +45,7 @@
 
 .done img{
     width: 100%;
-    height: 100%;   
+    height: 100%;
 }
 
 .erase{
@@ -59,7 +59,7 @@
 .erase img{
     width: 40%;
     height: 100%;
-    margin-right: 6%; 
+    margin-right: 6%;
 }
 
 .containerControlPanel {
@@ -67,7 +67,7 @@
     display: grid;
     grid-template-columns: [c1] 74vw [c2] 18vw [c3];
     grid-template-rows: [l1] 60vh [l2] 30vh [l3];
-    
+
 }
 
 .lifes_a {
@@ -102,7 +102,7 @@
     position:absolute;
     display: grid;
     grid-template-columns: [cl1] 12vw [cl2] 56vw [cl3];
-    grid-template-rows: [ln1] 59vh [ln2] 16vh [ln3] 2vh [ln4] 5vh [ln5];   
+    grid-template-rows: [ln1] 59vh [ln2] 16vh [ln3] 2vh [ln4] 5vh [ln5];
 }
 
 .sopa{
@@ -117,4 +117,193 @@
     grid-row: ln4 / ln5;
     z-index: 2;
     border: 2px solid rgb(255, 255, 255);
+}
+
+
+
+#r{
+  background: url('LETRAS-20190516T145633Z-001/LETRAS/botões-33.png');
+  background-repeat: no-repeat;
+  background-size: 30px 30px;
+  background-position: center;
+}
+
+#s{
+  background: url('LETRAS-20190516T145633Z-001/LETRAS/botões-34.png');
+  background-repeat: no-repeat;
+  background-size: 30px 30px;
+  background-position: center;
+}
+
+#t{
+  background: url('LETRAS-20190516T145633Z-001/LETRAS/botões-35.png');
+  background-repeat: no-repeat;
+  background-size: 30px 30px;
+  background-position: center;
+}
+#u{
+  background: url('LETRAS-20190516T145633Z-001/LETRAS/botões-36.png');
+  background-repeat: no-repeat;
+  background-size: 30px 30px;
+  background-position: center;
+}
+#v{
+  background: url('LETRAS-20190516T145633Z-001/LETRAS/botões-37.png');
+  background-repeat: no-repeat;
+  background-size: 30px 30px;
+  background-position: center;
+}
+#x{
+  backgrounde: url('LETRAS-20190516T145633Z-001/LETRAS/botões-38.png');
+  background-repeat: no-repeat;
+  background-size: 30px 30px;
+  background-position: center;
+}
+#z{
+  background: url('LETRAS-20190516T145633Z-001/LETRAS/botões-39.png');
+  background-repeat: no-repeat;
+  background-size: 30px 30px;
+  background-position: center;
+}
+#i{
+  background: url('LETRAS-20190516T145633Z-001/LETRAS/botões-41.png');
+  background-repeat: no-repeat;
+  background-size: 30px 30px;
+  background-position: center;
+}
+#j{
+  background: url('LETRAS-20190516T145633Z-001/LETRAS/botões-42.png');
+  background-repeat: no-repeat;
+  background-size: 30px 30px;
+  background-position: center;
+}
+#k{
+  background: url('LETRAS-20190516T145633Z-001/LETRAS/botões-43.png');
+  background-repeat: no-repeat;
+  background-size: 30px 30px;
+  background-position: center;
+}
+#l{
+  background: url('LETRAS-20190516T145633Z-001/LETRAS/botões-44.png');
+  background-repeat: no-repeat;
+  background-size: 30px 30px;
+  background-position: center;
+}
+#m{
+  background: url('LETRAS-20190516T145633Z-001/LETRAS/botões-45.png');
+  background-repeat: no-repeat;
+  background-size: 30px 30px;
+  background-position: center;
+}
+#n{
+  background: url('LETRAS-20190516T145633Z-001/LETRAS/botões-46.png');
+  background-repeat: no-repeat;
+  background-size: 30px 30px;
+  background-position: center;
+}
+#o{
+  background: url('LETRAS-20190516T145633Z-001/LETRAS/botões-47.png');
+  background-repeat: no-repeat;
+  background-size: 30px 30px;
+  background-position: center;
+}
+#p{
+  background: url('LETRAS-20190516T145633Z-001/LETRAS/botões-48.png');
+  background-repeat: no-repeat;
+  background-size: 30px 30px;
+  background-position: center;
+}
+#a{
+  background: url('LETRAS-20190516T145633Z-001/LETRAS/botões-49.png');
+  background-repeat: no-repeat;
+  background-size: 30px 30px;
+  background-position: center;
+}
+#b{
+  background: url('LETRAS-20190516T145633Z-001/LETRAS/botões-50.png');
+  background-repeat: no-repeat;
+  background-size: 30px 30px;
+  background-position: center;
+}
+#c{
+  background: url('LETRAS-20190516T145633Z-001/LETRAS/botões-51.png');
+  background-repeat: no-repeat;
+  background-size: 30px 30px;
+  background-position: center;
+}
+#d{
+  background: url('LETRAS-20190516T145633Z-001/LETRAS/botões-52.png');
+  background-repeat: no-repeat;
+  background-size: 30px 30px;
+  background-position: center;
+}
+#e{
+  background: url('LETRAS-20190516T145633Z-001/LETRAS/botões-53.png');
+  background-repeat: no-repeat;
+  background-size: 30px 30px;
+  background-position: center;
+}
+#f{
+  background: url('LETRAS-20190516T145633Z-001/LETRAS/botões-54.png');
+  background-repeat: no-repeat;
+  background-size: 30px 30px;
+  background-position: center;
+}
+#g{
+  background: url('LETRAS-20190516T145633Z-001/LETRAS/botões-55.png');
+  background-repeat: no-repeat;
+  background-size: 30px 30px;
+  background-position: center;
+}
+#h{
+  background: url('LETRAS-20190516T145633Z-001/LETRAS/botões-56.png');
+  background-repeat: no-repeat;
+  background-size: 30px 30px;
+  background-position: center;
+}
+#y{
+  background: url('LETRAS-20190516T145633Z-001/LETRAS/botões-57.png');
+  background-repeat: no-repeat;
+  background-size: 30px 30px;
+  background-position: center;
+}
+#w{
+  background: url('LETRAS-20190516T145633Z-001/LETRAS/botões-58.png');
+  background-repeat: no-repeat;
+  background-size: 30px 30px;
+  background-position: center;
+}
+
+.fill {
+  /*background-image: url('LETRAS-20190516T145633Z-001/LETRAS/botões-33.png');
+  */position: relative;
+  height: 30px;
+  width: 30px;
+  /*background-size: 30px 30px;*/
+  margin: 0 auto;
+  /*top: 2px;
+  left: 2px;*/
+  cursor: pointer;
+  background-position: center;
+}
+
+.empty {
+  display: inline-block;
+  height: 35px;
+  width: 40px;
+  margin: 8px;
+  border: solid 1px salmon;
+  /*background: white;*/
+}
+
+.emptyW {
+  display: inline-block;
+  height: 32px;
+  width: 40px;
+  margin: 0px;
+  margin-top: 4px;
+  /*margin-left: 2px;
+  margin-right: 2px;*/
+  border: solid 1px salmon;
+  /*background: white;*/
 }

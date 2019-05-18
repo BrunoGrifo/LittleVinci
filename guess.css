@@ -14,7 +14,7 @@
     display: grid;
     grid-template-columns: [col1] 7vw [col2] 3vw [col3] 24vw [col4] 10vw [col5] 20vw [col6] 7vw [col7];
     grid-template-rows: [line1] 56vh [line2] 5.5vh [line3] 22.8vh [line4] 6.8vh [line5];
-    
+
 }
 
 
@@ -46,7 +46,7 @@
 
 .done img{
     width: 100%;
-    height: 100%;   
+    height: 100%;
 }
 
 .erase{
@@ -60,7 +60,7 @@
 .erase img{
     width: 40%;
     height: 100%;
-    margin-right: 6%; 
+    margin-right: 6%;
 }
 
 .containerControlPanel {
@@ -68,7 +68,7 @@
     display: grid;
     grid-template-columns: [c1] 74vw [c2] 18vw [c3];
     grid-template-rows: [l1] 60vh [l2] 30vh [l3];
-    
+
 }
 
 .lifes_a {
@@ -95,4 +95,3 @@
     margin-left: 2%;
     width: 45%
 }
-

@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function() {
-   
+
    var mouse = {
       click: false,
       move: false,
@@ -56,6 +56,6 @@ document.addEventListener("DOMContentLoaded", function() {
       mouse.pos_prev = {x: mouse.pos.x, y: mouse.pos.y};
       setTimeout(mainLoop, 25);
    }
-   
+
    mainLoop();
 });

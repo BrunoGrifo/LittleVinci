@@ -4,6 +4,7 @@
 <link rel="stylesheet" type="text/css" href="popupCSS.css">
 
 <script src="socket.io/socket.io.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
 <script src="clientG.js"></script>
 <script src="popup.js"></script>
 </head>
@@ -18,9 +19,8 @@
         </div>
 
         <div class='done'>
-                <img  src="img/done.png" alt="" />
+                <input id="done" type="image" src="img/done.png" alt="Done" />
         </div>
-
         <!--
         <div class='erase'>
                 <img class='lifes' src="img/erase.png" alt="Erase" />
@@ -45,11 +45,104 @@
     <!-- SOPA DE LETRAS -->
     <div class="containerLetters">
         <div class="sopa">
+          <div id="row">
+            <div class="empty" id="r1" ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)">
+                <div class="fill" id="r" draggable="true" ondragstart="start(event)" ondragend="end(event)"> </div>
+              </div>
 
+            <div class="empty" id="r2" ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)">
+              <div class="fill" id="s" draggable="true" ondragstart="start(event)" ondragend="end(event)"> </div>
+            </div>
+
+            <div class="empty" id="r3" ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)">
+              <div class="fill" id="t" draggable="true" ondragstart="start(event)" ondragend="end(event)"> </div>
+            </div>
+
+        <div class="empty" id="r4" ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)">
+          <div class="fill" id="a" draggable="true" ondragstart="start(event)" ondragend="end(event)"> </div>
+        </div>
+
+        <div class="empty" id="r5" ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)">
+          <div class="fill" id="u" draggable="true" ondragstart="start(event)" ondragend="end(event)"> </div>
+        </div>
+      </div>
+      <div id="row">
+        <div class="empty" id="r6" ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)">
+          <div class="fill" id="l" draggable="true" ondragstart="start(event)" ondragend="end(event)"> </div>
+        </div>
+
+        <div class="empty" id="r7" ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)">
+          <div class="fill" id="d" draggable="true" ondragstart="start(event)" ondragend="end(event)"> </div>
+        </div>
+
+        <div class="empty" id="r8" ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)">
+          <div class="fill" id="y" draggable="true" ondragstart="start(event)" ondragend="end(event)"> </div>
+        </div>
+
+        <div class="empty" id="r9" ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)">
+          <div class="fill" id="e" draggable="true" ondragstart="start(event)" ondragend="end(event)"> </div>
+        </div>
+
+        <div class="empty" id="r10" ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)">
+          <div class="fill" id="o" draggable="true" ondragstart="start(event)" ondragend="end(event)"> </div>
+        </div>
+        <div class="empty" id="r11" ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)">
+      <div class="fill" id="b" draggable="true" ondragstart="start(event)" ondragend="end(event)"> </div>
+    </div>
+
+    <div class="empty" id="r12" ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)">
+      <div class="fill" id="g" draggable="true" ondragstart="start(event)" ondragend="end(event)"> </div>
+    </div>
+
+    <div class="empty" id="r13" ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)">
+      <div class="fill" id="z" draggable="true" ondragstart="start(event)" ondragend="end(event)"> </div>
+    </div>
+
+    <div class="empty" id="r14" ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)">
+      <div class="fill" id="n" draggable="true" ondragstart="start(event)" ondragend="end(event)"> </div>
+    </div>
+
+    <div class="empty" id="r15" ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)">
+      <div class="fill" id="m" draggable="true" ondragstart="start(event)" ondragend="end(event)"> </div>
+    </div>
+      </div>
         </div>
 
         <div class="word">
+          <div id="row">
+  <div id='i0' class="emptyW" ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)">
+  </div>
 
+  <div id='i1' class="emptyW" ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)">
+  </div>
+
+  <div id='i2' class="emptyW" ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)">
+  </div>
+
+  <div id='i3' class="emptyW" ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)">
+  </div>
+
+  <div id='i4' class="emptyW" ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)">
+  </div>
+
+  <div id='i5' class="emptyW" ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)">
+  </div>
+
+  <div id='i6' class="emptyW" ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)">
+  </div>
+
+  <div id='i7' class="emptyW" ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)">
+    </div>
+
+    <div id='i8' class="emptyW" ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)">
+    </div>
+
+    <div id='i9' class="emptyW" ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)">
+    </div>
+
+    <div id='i10' class="emptyW" ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)">
+    </div>
+</div>
         </div>
 
     </div>
@@ -61,46 +154,60 @@
         <img class='board' src="img/guess_board.png" alt="" />
     </div>
 
+    <!-- result POPUP content -->
+    <div id="resultpop" class="modal">
+            <div class="containerPos">
 
+                <div class="modal-content">
+                    <img src="img/congrats.png" alt="Instrucions" />
+                </div>
+
+                <div class="continue">
+                    <input id="closeit" type="image" src="img/continue_intro.png" alt="Intro_Submit" />
+                </div>
+
+            </div>
+
+        </div>
 
 
     <!-- POPUP content -->
-    <div id="myModal" class="modal">
+   <div id="myModal" class="modal">
             <div class="containerPos">
-    
+
                 <div class="modal-content">
                     <img src="img/guess_intro.png" alt="Instrucions" />
                 </div>
-    
+
                 <div class="continue">
                     <input id="closeBtn" type="image" src="img/continue_intro.png" alt="Intro_Submit" />
                 </div>
-    
+
             </div>
-    
+
         </div>
-    
+
         <div id="menuDef" class="modal">
                 <div class="containerMenu">
-        
+
                     <div class="menuDef-content">
                         <img src="img/menu-fundo.png" alt="Instrucions" />
                     </div>
-        
+
                     <div class="menuMenu">
                         <form action="/menu" method="GET">
                             <input id="" type="image" size="1" src="img/menu-menu.png" alt="Intro_Submit" />
                         </form>
                     </div>
-                    
+
                     <div class="menuRestart">
                             <input id="" type="image" src="img/menu-restart.png" alt="Intro_Submit" />
                     </div>
-    
+
                     <div class="menuLeave">
                         <input id="leaveBtn" type="image" src="img/menu-leave.png" alt="Intro_Submit" />\
                     </div>
-    
+
                     <div class="menuInstru">
                             <input id="myBtn" type="image" src="img/menu-instru.png" alt="Intro_Submit" />
                     </div>
@@ -110,7 +217,7 @@
                         </div>
                     </div>
             </div>
-        
+
         </div>
 
 </body>

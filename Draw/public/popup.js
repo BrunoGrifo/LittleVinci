@@ -1,7 +1,7 @@
 var modal, btn, span, menuP, menuX, menuRender,sound, playAgain, inputDraw, soundChose ;
 
 (function()
-{	
+{
     window.addEventListener("load", main);
 
 }());
@@ -12,7 +12,7 @@ function main() {
   menuRender = document.getElementById("menuDef");
   playAgain = document.getElementById("playAgain");
   inputDraw = document.getElementById("inputDraw");
-  
+
   //Continuar nas instruções
   span = document.getElementById("closeBtn");;
   span.addEventListener("click", ctn);
@@ -32,34 +32,35 @@ function main() {
   //Botão de sair do manu
   menuX = document.getElementById("menuX");
   menuX.addEventListener("click",exitMenu);
-  
+
+
   if (window.location.pathname == '/clienteD.html'){
     //Botão de escolher musica
     soundChose = document.getElementById("soundChose");
     soundChose.addEventListener("click",writeDrawName);
   }
-  
+
 
   modal.style.display = "block";
 
- 
+
 //   menuPC.addEventListener("click", menuClose);
 //   window.addEventListener("click", fora);
 
 }
-    // When the user clicks the button, open the modal 
+    // When the user clicks the button, open the modal
   function instru() {
     menuRender.style.display = "none";
     modal.style.display = "block";
   }
-  
+
   function ctn() {
     modal.style.display = "none";
     inputDraw.style.display = "none";
     playAgain.style.display = "block";
-    sound.style.display = "block"; 
+    sound.style.display = "block";
   }
-  
+
   function menu() {
     menuRender.style.display = "block";
   }
@@ -68,8 +69,8 @@ function main() {
   }
 
   function writeDrawName(){
-    playAgain.style.display = "none"; 
-    inputDraw.style.display = "block";   
+    playAgain.style.display = "none";
+    inputDraw.style.display = "block";
   }
 
 
@@ -78,7 +79,7 @@ function main() {
   function leave(){
     var m = confirm("Are you sure you want to leave the game?");
   }
-  
+
 //   function () {
 //     menuP.style.display = "none";
 //   }
@@ -89,5 +90,3 @@ function main() {
 //       modal.style.display = "none";
 //     }
 // }
-
-

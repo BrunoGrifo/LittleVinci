@@ -24,15 +24,29 @@ app.route('/draw')
   		res.sendFile(__dirname+'/clientG.html');
   	});
 
-    app.get('/word',function (req, res) {
-        console.log("hello:"+String(req.query));
-    		//res.sendFile(__dirname+'/clientG.html');
-       });
-       
+
+
 app.route('/menu').get(function (req, res) {
    res.sendFile(__dirname+'/index.html');
 });
-      
+
+//Insert Word =================================
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({extended: true}));
+app.get('/word', function(req, res, next) {
+  var guess = req.query.guess;
+  console.log("hello:"+guess);
+  if(guess == "bosta"){
+    return res.send({ valid: true });
+  }
+  else{
+    return res.send({ valid: false });
+  }
+//console.log(util.inspect(req, false, null));
+
+
+});
+
 // array of all lines drawn
 var line_history = [];
 
