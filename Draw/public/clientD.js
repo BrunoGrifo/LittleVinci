@@ -37,6 +37,26 @@ document.addEventListener("DOMContentLoaded", function() {
         }
    }
 
+   // Game ended handler
+ socket.on('gameWin', function (data) {
+      if(data.game==true){
+        var menuGameEnd = document.getElementById("gameEnd");
+        menuGameEnd.style.display = "block";
+      }
+      console.log("i was called:"+data.game);
+
+
+   });
+
+   $(function(){
+            $('#closeit').click(function(e) {
+                //e.preventDefault();
+                var data = "";
+                $.get('/guess', function(result) {
+                  window.location.href = '/guess';
+                  });
+               });
+             });
 
    // draw line received from server
 	socket.on('draw_line', function (data) {

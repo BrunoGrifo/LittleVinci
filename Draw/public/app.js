@@ -16,11 +16,15 @@ console.log("Server running on 127.0.0.1:3000");
 
 app.route('/draw')
  	.get(function (req, res) {
+    console.log("am i herep0");
+    palavra="";
+    line_history = [];
 		res.sendFile(__dirname+'/clientD.html');
 	});
 
   app.route('/guess')
    	.get(function (req, res) {
+      palavra="";
   		res.sendFile(__dirname+'/clientG.html');
   	});
 
@@ -59,6 +63,7 @@ app.get('/word', function(req, res, next) {
   var guess = req.query.guess;
   console.log("hello:"+guess);
   if(guess == palavra){
+    io.emit('gameWin', { game: true });
     return res.send({ valid: true });
   }
   else{

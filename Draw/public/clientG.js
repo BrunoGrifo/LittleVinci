@@ -9,14 +9,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 
-   //Botão done
-  /*var done = document.getElementById("done");
-   done.addEventListener("click", menuB);
 
-  resultRender = document.getElementById("resultpop");
-   function menuB() {
-     resultRender.style.display = "block";
-   }*/
 
 
    menuResult = document.getElementById("resultpop");
@@ -24,8 +17,16 @@ document.addEventListener("DOMContentLoaded", function() {
      menuResult.style.display = "none";
    }
    //Botão de sair do manu
-   closeit = document.getElementById("closeit");
-   closeit.addEventListener("click",exitDone);
+   //closeit = document.getElementById("closeit");
+   //closeit.addEventListener("click",exitDone);
+
+   tryAgain = document.getElementById("tryAgain");
+   function exitPop() {
+     tryAgain.style.display = "none";
+   }
+   //Botão de sair do manu
+   closeit = document.getElementById("continuePlay");
+   closeit.addEventListener("click", exitPop);
 
    // set canvas to full browser width/height
    //canvas.width = width;
@@ -176,6 +177,7 @@ $(function(){
             if(result.valid == false)
             {
                console.log('\'you suck');
+               $('#tryAgain').show(result);
                 //window.location.href = '/something';
             }
             else
@@ -188,3 +190,14 @@ $(function(){
           });
        });
      });
+
+
+     $(function(){
+              $('#closeit').click(function(e) {
+                  //e.preventDefault();
+                  var data = "";
+                  $.get('/draw', function(result) {
+                    window.location.href = '/draw';
+                    });
+                 });
+               });
