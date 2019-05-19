@@ -31,12 +31,20 @@ app.route('/menu').get(function (req, res) {
 });
 
 let palavra;
+var ready = false;
     //Insert Word FROM DRAW PERSPECTIVE =================================
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 app.get('/insert', function(req, res, next) {
    palavra = req.query.guess;
-      return res.send({ valid: true });
+   ready=true;
+   console.log("am i here?:"+palavra);
+   // send line to all clients
+   if(ready==true){
+     io.emit('ready', { ready: true, palavra: palavra });
+     ready = false;
+   }
+   return res.send({ valid: true });
     //console.log(util.inspect(req, false, null));
 
 
@@ -61,6 +69,7 @@ app.get('/word', function(req, res, next) {
 
 });
 
+
 // array of all lines drawn
 var line_history = [];
 
@@ -78,5 +87,13 @@ io.on('connection', function (socket) {
         line_history.push(data.line);
         // send line to all clients
         io.emit('draw_line', { line: data.line });
+     });
+
+     // add handler for message type "clean_canvas".
+     socket.on('clean_canvas', function (data) {
+       if(data.cleanup==true){
+         console.log("dentro do app-cleanup");
+         io.emit('clean_canvas', { cleanup: data.cleanup });
+       }
      });
   });

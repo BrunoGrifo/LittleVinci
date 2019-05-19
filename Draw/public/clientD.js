@@ -31,7 +31,9 @@ document.addEventListener("DOMContentLoaded", function() {
    erase.onmousedown = function(e){
       var m = confirm("Are you sure you want to erase everything?");
         if (m) {
+          console.log("dentro do clientD-cleanup");
             context.clearRect(0, 0, canvas.width, canvas.height);
+            socket.emit('clean_canvas', { cleanup: true })
         }
    }
 

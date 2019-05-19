@@ -58,9 +58,11 @@ function main() {
 
   function ctn() {
     modal.style.display = "none";
-    inputDraw.style.display = "none";
-    playAgain.style.display = "block";
-    sound.style.display = "block";
+    if (window.location.pathname == '/draw'){
+      inputDraw.style.display = "none";
+      playAgain.style.display = "block";
+      sound.style.display = "block";
+    }
   }
 
   function menu() {

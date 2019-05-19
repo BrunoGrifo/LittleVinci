@@ -39,6 +39,25 @@ document.addEventListener("DOMContentLoaded", function() {
       context.lineTo(line[1].x * canvas.width, line[1].y * canvas.height);
       context.stroke();
    });
+var ready;
+   // get the ready signal from server
+ socket.on('ready', function (data) {
+      console.log("i was called:"+data.palavra);
+      createSoup(data.palavra);
+      ready = data.ready;
+      var buttonC = document.getElementById("closeBtn");
+      if(ready==true){
+        buttonC.disabled=false;
+      }
+   });
+
+   // clean up canvas from server
+	socket.on('clean_canvas', function (data) {
+    console.log("dentro do clientG-cleanup");
+    if(data.cleanup == true){
+      context.clearRect(0, 0, canvas.width, canvas.height);
+    }
+   });
 });
 
 /**
@@ -88,19 +107,67 @@ function drop(e){
 	e.target.appendChild(document.getElementById(elementoArrastrado)); // Coloca el elemento soltado sobre el elemento desde el que se llamo esta funcion
 }
 
+function createSoup(palavra){
+  var array=[];
+  //var string = String(palavra);
+  //colocar as letras num array
+  array = [...palavra];
+  console.log("palavra feito em array:"+array);
+  //Letras do abc
+  var abc = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','x','y','z'];
+  //recebe o array de letras com ordem random
+  while(array.length < 18){
+    var item = abc[Math.floor(Math.random()*abc.length)];
+    array.push(item);
+  }
+  console.log("sopinha:"+array);
+  var array_random= shuffleArray(array);
+  console.log("sopinha com desordem: "+array_random);
+  createSoupView(array_random);
+}
 
+ function createSoupView(array){
+   for(var i=0;i<18;i++){
+     var id = "r"+i;
+     var div = document.getElementById(id);
+     // Create the inner div before appending to the body
+     var innerDiv = document.createElement('div');
+     innerDiv.setAttribute("class", "fill");
+     innerDiv.setAttribute("id", "l"+i);
+     innerDiv.setAttribute("draggable", "true");
+     innerDiv.setAttribute("ondragstart", "start(event)");
+     innerDiv.setAttribute("ondragstart", "start(event)");
+     innerDiv.setAttribute("ondragend", "end(event)");
+     innerDiv.style.background = 'url(LETRAS/'+array[i]+'.png) no-repeat center';
+     innerDiv.style.backgroundSize = "30px 30px";
+     div.appendChild(innerDiv);
+   }
+ }
+
+function shuffleArray(array) {
+    for (var i = array.length - 1; i > 0; i--) {
+        var j = Math.floor(Math.random() * (i + 1));
+        var temp = array[i];
+        array[i] = array[j];
+        array[j] = temp;
+    }
+    return array;
+}
 
 $(function(){
     $('#done').click(function(e) {
         e.preventDefault();
         var finalword='';
         for(var i=0;i<11;i++){
-          var aux= "#i"+i;
+          var id= "#i"+i;
           //console.log(aux2);
           //console.log(aux3);
-          if($(aux).children().length > 0){
-            finalword = finalword + $(aux).children().attr('id');
-            console.log('batata:'+i+':'+$(aux).children().attr('id'));
+          if($(id).children().length > 0){
+            var url = $(id).children().css('background-image');
+            url = url.match(/url\(["']?([^"']*)["']?\)/)[1];
+            finalword = finalword + url[29];
+            //console.log('batata:'+i+':'+$(id).children().css('background-image'));
+            //console.log("url:"+);
           }
         }
         console.log(finalword);
