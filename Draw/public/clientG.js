@@ -166,7 +166,9 @@ $(function(){
           if($(id).children().length > 0){
             var url = $(id).children().css('background-image');
             url = url.match(/url\(["']?([^"']*)["']?\)/)[1];
-            finalword = finalword + url[29];
+            console.log("estou aqui url:"+url);
+            url= url.split("").reverse().join("");
+            finalword = finalword + url[4];
             //console.log('batata:'+i+':'+$(id).children().css('background-image'));
             //console.log("url:"+);
           }
