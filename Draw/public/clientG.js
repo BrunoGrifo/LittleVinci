@@ -117,7 +117,7 @@ function createSoup(palavra){
   //Letras do abc
   var abc = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','x','y','z'];
   //recebe o array de letras com ordem random
-  while(array.length < 18){
+  while(array.length < 26){
     var item = abc[Math.floor(Math.random()*abc.length)];
     array.push(item);
   }
@@ -128,7 +128,7 @@ function createSoup(palavra){
 }
 
  function createSoupView(array){
-   for(var i=0;i<18;i++){
+   for(var i=0;i<26;i++){
      var id = "r"+i;
      var div = document.getElementById(id);
      // Create the inner div before appending to the body
@@ -159,7 +159,7 @@ $(function(){
     $('#done').click(function(e) {
         e.preventDefault();
         var finalword='';
-        for(var i=0;i<11;i++){
+        for(var i=0;i<18;i++){
           var id= "#i"+i;
           //console.log(aux2);
           //console.log(aux3);
