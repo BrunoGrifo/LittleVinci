@@ -1,4 +1,4 @@
-var modal, btn, span, menuP, menuX, menuRender,sound, playAgain, inputDraw, soundChose ;
+var modal, btn, span, menuP, menuX, menuRender,sound, playAgain, inputDraw, soundChose, go;
 
 (function()
 {
@@ -12,6 +12,9 @@ function main() {
   menuRender = document.getElementById("menuDef");
   playAgain = document.getElementById("playAgain");
   inputDraw = document.getElementById("inputDraw");
+
+
+  go = document.getElementById("gameOVER");  //-------------------------------------------->AQUI
 
   //Continuar nas instruções
   span = document.getElementById("closeBtn");;
@@ -66,7 +69,9 @@ function main() {
   }
 
   function menu() {
-    menuRender.style.display = "block";
+    // menuRender.style.display = "block";
+    go.style.display = "block";    //----------------------------------------->AQUI
+
   }
   function exitMenu() {
     menuRender.style.display = "none";
