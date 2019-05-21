@@ -80,6 +80,47 @@ document.addEventListener("DOMContentLoaded", function() {
    }
 
    mainLoop();
+
+   /* WORD UPDATE LIVE WAITING FOR HTML
+      // put letter received from server
+      socket.on('word_update', function (data) {
+                var letter = data.letter;
+                var id = "i"+letter[0];
+                console.log("posicao:"+letter[0]+" letter:"+letter[1]);
+                var div = document.getElementById(id);
+                if(div.childElementCount > 0 ){
+                  var sonId = div.childNodes[0].id;
+                  if(letter[1] == '0'){
+                    div.removeChild(div.childNodes[0]);
+                  }
+                  else{
+                    //DO NOTHING
+                  }
+
+                }
+                else{
+                  if(letter[1] == '0'){
+                    //
+                  }
+                  else{
+                    // Create the inner div before appending to the body
+                    var innerDiv = document.createElement('div');
+                    innerDiv.setAttribute("class", "fill");
+                    innerDiv.setAttribute("id", "p"+letter[0]);
+                    innerDiv.setAttribute("draggable", "true");
+                    innerDiv.setAttribute("ondragstart", "start(event)");
+                    innerDiv.setAttribute("ondragstart", "start(event)");
+                    innerDiv.setAttribute("ondragend", "end(event)");
+                    innerDiv.style.background = 'url(LETRAS/'+letter[1]+'.png) no-repeat center';
+                    innerDiv.style.backgroundSize = "30px 30px";
+                    div.appendChild(innerDiv);
+                  }
+
+                }
+
+            });
+            /*
+
 });
 
 

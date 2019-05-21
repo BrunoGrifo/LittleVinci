@@ -59,6 +59,34 @@ var ready;
       context.clearRect(0, 0, canvas.width, canvas.height);
     }
    });
+/* UPDATING WORD -WAITINF FOR HTML IN DRAW
+   // updating word loop, running every 1000ms
+     function updateWord() {
+        // check the array of the word
+        for(var i=0;i<11;i++){
+        var id= "#i"+i;
+        //console.log(aux2);
+        //console.log(aux3);
+        if($(id).children().length > 0){
+          var url = $(id).children().css('background-image');
+          url = url.match(/url\(["']?([^"']*)["']?\)/)[1];
+          console.log("estou aqui url:"+url);
+          url= url.split("").reverse().join("");
+          //finalword = finalword + url[4];
+          //space=1;
+          socket.emit('word_update', { letter : [ i , url[4] ] });
+          //console.log('batata:'+i+':'+$(id).children().css('background-image'));
+          //console.log("url:"+);
+        }
+        else{
+          socket.emit('word_update', { letter : [ i , '0' ] });
+        }
+      }
+        setTimeout(mainLoop, 1000);
+     }
+     updateWord();
+     */
+
 });
 
 /**
