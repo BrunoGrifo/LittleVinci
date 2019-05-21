@@ -112,6 +112,7 @@ function createSoup(palavra){
   var array=[];
   //var string = String(palavra);
   //colocar as letras num array
+  palavra = palavra.split(' ').join('');
   array = [...palavra];
   console.log("palavra feito em array:"+array);
   //Letras do abc
@@ -159,6 +160,7 @@ $(function(){
     $('#done').click(function(e) {
         e.preventDefault();
         var finalword='';
+        var space = 0;
         for(var i=0;i<18;i++){
           var id= "#i"+i;
           //console.log(aux2);
@@ -169,8 +171,15 @@ $(function(){
             console.log("estou aqui url:"+url);
             url= url.split("").reverse().join("");
             finalword = finalword + url[4];
+            space=1;
             //console.log('batata:'+i+':'+$(id).children().css('background-image'));
             //console.log("url:"+);
+          }
+          else{
+            if(space==1){
+              finalword = finalword + " ";
+              space=2;
+            }
           }
         }
         console.log(finalword);
