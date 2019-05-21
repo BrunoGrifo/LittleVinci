@@ -183,7 +183,7 @@ function shuffleArray(array) {
     }
     return array;
 }
-
+var lives=3;
 $(function(){
     $('#done').click(function(e) {
         e.preventDefault();
@@ -217,7 +217,11 @@ $(function(){
             {
                console.log('\'you suck');
                $('#tryAgain').show(result);
-                //window.location.href = '/something';
+               var lifeId = "lf"+lives;
+              if(lives > 0){
+                lives--;
+                document.getElementById(lifeId).src="img/life_used.png";
+              }
             }
             else
             {
