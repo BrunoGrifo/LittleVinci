@@ -20,9 +20,9 @@
 
         </div>
 
-        <div class='done'>
+        <!-- <div class='done'>
                 <img  src="img/done.png" alt="" />
-        </div>
+        </div> -->
 
         <div class='erase'>
                 <!-- <img class='lifes' src="img/erase.png" alt="Erase" /> -->
@@ -63,16 +63,29 @@
         <img class='board' src="img/draw_board.png" alt="" />
     </div>
 
+    <!-- Sopa de letras -->
+
+    <div class="containerLettersStream">
+            <div class="LettersLine">
+            
+            </div>
+        
+    </div>
+
     <!-- result POPUP content -->
     <div id="gameEnd" class="modal">
-            <div class="containerPos">
+            <div class="containerSound">
 
-                <div class="modal-content">
+                    <div class="containerSound-board">
+                            <img src="img/sound-board.png" alt="Instrucions" />
+                    </div>
+
+                <div class="containerSound-PA">
                     <img src="img/congrats.png" alt="Instrucions" />
                 </div>
 
-                <div class="continue" >
-                    <input id="closeit" type="image" src="img/continue_intro.png" alt="Intro_Submit" />
+                <div class="containerSound-done" >
+                    <input id="closeit" type="image" src="img/sound-check.png" alt="Intro_Submit" />
                 </div>
 
             </div>
@@ -82,7 +95,7 @@
     <!-- POPUP content -->
     <div id="myModal" class="modal">
         <div class="containerPos">
-
+            
             <div class="modal-content">
                 <img src="img/draw_intro.png" alt="Instrucions" />
             </div>
