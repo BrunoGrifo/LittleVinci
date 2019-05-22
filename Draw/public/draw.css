@@ -36,7 +36,7 @@
     height: 100%;
 }
 .settings #menuP{
-    border: 0 none; 
+    border: 0 none;
     outline: 0;
 }
 
@@ -64,7 +64,7 @@
     width: 40%;
     height: 100%;
     margin-right: 6%;
-    border: 0 none; 
+    border: 0 none;
     outline: 0;
 }
 
@@ -92,7 +92,7 @@
 .lifes_a .help input{
     margin-left: 37%;
     width: 25%;
-    border: 0 none; 
+    border: 0 none;
     outline: 0;
 }
 
@@ -115,5 +115,34 @@
     grid-row: l2 / l3;
     z-index: 2;
     border: 2px solid rgb(255, 255, 255);
+    display: table-row;
 }
 
+
+  #r{
+        background: url('LETRAS/r.png');
+        background-repeat: no-repeat;
+        background-size: 12.5px 12.5px;
+        background-position: left top;
+      }
+
+      .fill {
+  /*background-image: url('LETRAS-20190516T145633Z-001/LETRAS/botões-33.png');*/
+  position: relative;
+  height: 13px;
+  width: 13px;
+  top: 0px;
+  left: 0px;
+  cursor: pointer;
+}
+.emptyW {
+     display: inline-block;
+     height: 13px;
+     width: 10px;
+     margin: 0px;
+     margin-top: 1px;
+     /*margin-left: 2px;
+     margin-right: 2px;*/
+     border: solid 1px salmon;
+     /*background: white;*/
+   }

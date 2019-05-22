@@ -81,12 +81,12 @@ document.addEventListener("DOMContentLoaded", function() {
 
    mainLoop();
 
-   /* WORD UPDATE LIVE WAITING FOR HTML
+   // WORD UPDATE LIVE WAITING FOR HTML
       // put letter received from server
       socket.on('word_update', function (data) {
                 var letter = data.letter;
                 var id = "i"+letter[0];
-                console.log("posicao:"+letter[0]+" letter:"+letter[1]);
+                //console.log("posicao:"+letter[0]+" letter:"+letter[1]);
                 var div = document.getElementById(id);
                 if(div.childElementCount > 0 ){
                   var sonId = div.childNodes[0].id;
@@ -112,14 +112,35 @@ document.addEventListener("DOMContentLoaded", function() {
                     innerDiv.setAttribute("ondragstart", "start(event)");
                     innerDiv.setAttribute("ondragend", "end(event)");
                     innerDiv.style.background = 'url(LETRAS/'+letter[1]+'.png) no-repeat center';
-                    innerDiv.style.backgroundSize = "30px 30px";
+                    innerDiv.style.backgroundSize = "12.5px 12.5px";
                     div.appendChild(innerDiv);
                   }
 
                 }
 
             });
-            */
+
+            // draw line received from server
+         	socket.on('game_over', function (data) {
+            if(data.game==true){
+              console.log("Hello modafuka");
+              var modal = document.getElementById("gameOVER");
+              modal.style.display = "block";
+            }
+            });
+
+            $(function(){
+                     $('#leaveGame').click(function(e) {
+                         //e.preventDefault();
+                           window.location.href = '/';
+                        });
+                      });
+            var reload = document.getElementById("startOver");
+            reload.addEventListener("click", reloadP);
+            //start again when ppl close
+            function reloadP() {
+              location.reload();
+            }
 
 });
 

@@ -103,11 +103,19 @@ io.on('connection', function (socket) {
      });
 
      // add handler for message type "word_update".
-    /*socket.on('word_update', function (data) {
+    socket.on('game_over', function (data) {
+      line_history=[];
+      palavra="";
+      console.log("Game Over");
+       io.emit('game_over', { game: data.game });
+    });
+
+     // add handler for message type "word_update".
+    socket.on('word_update', function (data) {
        // add received line to history
        //line_history.push(data.line);
        // send line to all clients
        //console.log("receveing letters:"+data.letter[1]);
-       io.emit('word_update', { letter: data.letter });*
-    });*/
+       io.emit('word_update', { letter: data.letter });
+    });
   });

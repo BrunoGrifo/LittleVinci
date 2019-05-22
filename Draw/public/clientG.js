@@ -10,8 +10,6 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 
-
-
    menuResult = document.getElementById("resultpop");
    function exitDone() {
      menuResult.style.display = "none";
@@ -59,11 +57,11 @@ var ready;
       context.clearRect(0, 0, canvas.width, canvas.height);
     }
    });
-/* UPDATING WORD -WAITINF FOR HTML IN DRAW
+/// UPDATING WORD -WAITINF FOR HTML IN DRAW
    // updating word loop, running every 1000ms
      function updateWord() {
         // check the array of the word
-        for(var i=0;i<11;i++){
+        for(var i=0;i<18;i++){
         var id= "#i"+i;
         //console.log(aux2);
         //console.log(aux3);
@@ -82,10 +80,83 @@ var ready;
           socket.emit('word_update', { letter : [ i , '0' ] });
         }
       }
-        setTimeout(mainLoop, 1000);
+        setTimeout(updateWord, 1000);
      }
      updateWord();
-     */
+
+     var reload = document.getElementById("startOver");
+     reload.addEventListener("click", reloadP);
+     //start again when ppl close
+     function reloadP() {
+       location.reload();
+     }
+
+     $(function(){
+              $('#leaveGame').click(function(e) {
+                  //e.preventDefault();
+                    //console.log("fechar a janelita");
+                    //socket.emit('game_over', { game : true });
+                    //console.log("fechar a janelita apos o emit da treta");
+                    window.location.href = '/';
+                 });
+               });
+
+               var lives=3;
+               $(function(){
+                   $('#done').click(function(e) {
+                       e.preventDefault();
+                       var finalword='';
+                       var space = 0;
+                       for(var i=0;i<18;i++){
+                         var id= "#i"+i;
+                         //console.log(aux2);
+                         //console.log(aux3);
+                         if($(id).children().length > 0){
+                           var url = $(id).children().css('background-image');
+                           url = url.match(/url\(["']?([^"']*)["']?\)/)[1];
+                           console.log("estou aqui url:"+url);
+                           url= url.split("").reverse().join("");
+                           finalword = finalword + url[4];
+                           space=1;
+                           //console.log('batata:'+i+':'+$(id).children().css('background-image'));
+                           //console.log("url:"+);
+                         }
+                         else{
+                           if(space==1){
+                             finalword = finalword + " ";
+                             space=2;
+                           }
+                         }
+                       }
+                       console.log(finalword);
+                       var data = 'guess='+finalword;
+                       $.get('/word', data, function(result) {
+                           if(result.valid == false)
+                           {
+                              console.log('\'you suck');
+
+                              var lifeId = "lf"+lives;
+                             if(lives > 1){
+                               $('#tryAgain').show(result);
+                               lives--;
+                               document.getElementById(lifeId).src="img/life_used.png";
+                             }
+                             else{
+                               socket.emit('game_over', { game : true });
+                               $('#gameOVER').show(result);
+                               console.log('\'you lost noob');
+                             }
+                           }
+                           else
+                           {
+                             console.log('\'you rock');
+                               $('#resultpop').show(result);
+                               //$('#myModal').modal('show');
+                               console.log('depois do popup');
+                           }
+                         });
+                      });
+                    });
 
 });
 
@@ -183,56 +254,7 @@ function shuffleArray(array) {
     }
     return array;
 }
-var lives=3;
-$(function(){
-    $('#done').click(function(e) {
-        e.preventDefault();
-        var finalword='';
-        var space = 0;
-        for(var i=0;i<18;i++){
-          var id= "#i"+i;
-          //console.log(aux2);
-          //console.log(aux3);
-          if($(id).children().length > 0){
-            var url = $(id).children().css('background-image');
-            url = url.match(/url\(["']?([^"']*)["']?\)/)[1];
-            console.log("estou aqui url:"+url);
-            url= url.split("").reverse().join("");
-            finalword = finalword + url[4];
-            space=1;
-            //console.log('batata:'+i+':'+$(id).children().css('background-image'));
-            //console.log("url:"+);
-          }
-          else{
-            if(space==1){
-              finalword = finalword + " ";
-              space=2;
-            }
-          }
-        }
-        console.log(finalword);
-        var data = 'guess='+finalword;
-        $.get('/word', data, function(result) {
-            if(result.valid == false)
-            {
-               console.log('\'you suck');
-               $('#tryAgain').show(result);
-               var lifeId = "lf"+lives;
-              if(lives > 0){
-                lives--;
-                document.getElementById(lifeId).src="img/life_used.png";
-              }
-            }
-            else
-            {
-              console.log('\'you rock');
-                $('#resultpop').show(result);
-                //$('#myModal').modal('show');
-                console.log('depois do popup');
-            }
-          });
-       });
-     });
+
 
 
      $(function(){
