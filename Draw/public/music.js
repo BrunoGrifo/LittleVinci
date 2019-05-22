@@ -45,8 +45,9 @@ function replay(){
     if (window.getComputedStyle(modal).display === "block") {
         // Do something..
     }else{
-        audio = new Audio('sounds/'+name+'.mp3');
-        //type="video/mp4"
+        audio = new Audio('sounds_wav/'+name+'.wav');
+        //audio = new Audio('sounds_mp3/'+name+'.mp3');
+        //audio.setAttribute("type","video/mp4" );
         audio.play();
     }
     // audio = new Audio('sounds/'+name+'.mp3');
