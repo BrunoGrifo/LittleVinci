@@ -80,7 +80,7 @@ var ready;
           socket.emit('word_update', { letter : [ i , '0' ] });
         }
       }
-        setTimeout(updateWord, 1000);
+        setTimeout(updateWord, 25);
      }
      updateWord();
 
