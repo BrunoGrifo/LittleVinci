@@ -3,9 +3,11 @@
 <link rel="stylesheet" type="text/css" href="draw.css">
 <link rel="stylesheet" type="text/css" href="popupCSS.css">
 <script src="socket.io/socket.io.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
 <script src="clientD.js"></script>
 <script src="popup.js"></script>
 <script src="music.js"></script>
+
 </head>
 
 <body>
@@ -18,9 +20,9 @@
 
         </div>
 
-        <div class='done'>
+        <!-- <div class='done'>
                 <img  src="img/done.png" alt="" />
-        </div>
+        </div> -->
 
         <div class='erase'>
                 <!-- <img class='lifes' src="img/erase.png" alt="Erase" /> -->
@@ -34,23 +36,23 @@
     <div class="containerControlPanel">
 
         <div class='lifes_a'>
+          <!--   <img class='lifes' src="img/life.png" alt="life" />
             <img class='lifes' src="img/life.png" alt="life" />
-            <img class='lifes' src="img/life.png" alt="life" />
-            <img class='lifes' src="img/life.png" alt="life" />
+            <img class='lifes' src="img/life.png" alt="life" />-->
 
             <div class='help'>
                 <!-- <img src="img/play.png" alt="play" /> -->
                 <input id="playBtn" type="image" src="img/play.png" alt="play" />
             </div>
 
-            <img class='desc_help' src="img/desc_play.png" alt="play_desc" />
+            <img class='desc_help' src="img/desc_play_v2.png" alt="play_desc" />
 
             <div class='help'>
                 <!-- <img src="img/pass.png" alt="pass" /> -->
                 <input id="passBtn" type="image" src="img/pass.png" alt="pass" />
             </div>
-            
-            <img class='desc_help' src="img/desc_pass.png" alt="pass_desc" />
+
+            <img class='desc_help' src="img/desc_pass_v2.png" alt="pass_desc" />
         </div>
     </div>
 
@@ -61,7 +63,83 @@
         <img class='board' src="img/draw_board.png" alt="" />
     </div>
 
-    
+    <!-- Sopa de letras -->
+
+    <div class="containerLettersStream">
+            <div class="LettersLine">
+              <div id='i0' class="emptyW" ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)">
+
+  </div>
+
+  <div id='i1' class="emptyW" ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)">
+  </div>
+
+  <div id='i2' class="emptyW" ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)">
+  </div>
+
+  <div id='i3' class="emptyW" ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)">
+  </div>
+
+  <div id='i4' class="emptyW" ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)">
+  </div>
+
+  <div id='i5' class="emptyW" ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)">
+  </div>
+
+  <div id='i6' class="emptyW" ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)">
+  </div>
+
+  <div id='i7' class="emptyW" ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)">
+    </div>
+
+    <div id='i8' class="emptyW" ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)">
+    </div>
+
+    <div id='i9' class="emptyW" ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)">
+    </div>
+
+    <div id='i10' class="emptyW" ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)">
+    </div>
+
+    <div id='i11' class="emptyW" ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)">
+    </div>
+
+    <div id='i12' class="emptyW" ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)">
+    </div>
+    <div id='i13' class="emptyW" ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)">
+    </div>
+    <div id='i14' class="emptyW" ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)">
+    </div>
+    <div id='i15' class="emptyW" ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)">
+    </div>
+    <div id='i16' class="emptyW" ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)">
+    </div>
+    <div id='i17' class="emptyW" ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)">
+    </div>
+            </div>
+
+    </div>
+
+    <!-- result POPUP content -->
+    <div id="gameEnd" class="modal">
+            <div class="containerSound">
+
+                    <div class="containerSound-board">
+                            <img src="img/sound-board.png" alt="Instrucions" />
+                    </div>
+
+                <div class="containerSound-PA">
+                    <img src="img/congrats.png" alt="Instrucions" />
+                </div>
+
+                <div class="containerSound-done" >
+                    <input id="closeit" type="image" src="img/sound-check.png" alt="Intro_Submit" />
+                </div>
+
+            </div>
+
+        </div>
+
     <!-- POPUP content -->
     <div id="myModal" class="modal">
         <div class="containerPos">
@@ -80,17 +158,17 @@
 
     <div id="menuDef" class="modal">
             <div class="containerMenu">
-    
+
                 <div class="menuDef-content">
                     <img src="img/menu-fundo.png" alt="Instrucions" />
                 </div>
-    
+
                 <div class="menuMenu">
                     <form action="/menu" method="GET">
                         <input id="" type="image" size="1" src="img/menu-menu.png" alt="Intro_Submit" />
                     </form>
                 </div>
-                
+
                 <div class="menuRestart">
                         <input id="" type="image" src="img/menu-restart.png" alt="Intro_Submit" />
                 </div>
@@ -108,11 +186,11 @@
                     </div>
                 </div>
         </div>
-    
+
     </div>
 
     <div id="playSound" class="modal">
-        
+
         <div class="containerSound">
                 <div class="containerSound-board">
                         <img src="img/sound-board.png" alt="Instrucions" />
@@ -133,8 +211,9 @@
 
                 <div id="inputDraw">
                     <div class="containerSound">
+                        <!-- RUI VENTURA INPUT PARA ENVIAR PALAVRA PARA A SOPA DE LETRAS -->
                         <div class="containerSound-D">
-                            <input type="text" placeholder="What are you Drawing?"/>
+                            <input id="wordToDraw" type="text" placeholder="What are you Drawing?"/>
                         </div>
 
                         <!-- RUI VENTURA BOTÂO PARA ENVIAR PALAVRA PARA A SOPA DE LETRAS -->
@@ -144,7 +223,27 @@
                     </div>
                 </div>
 
-                
+
+
+        </div>
+
+    </div>
+
+    <!-- GAME OVER -->
+<div id="gameOVER" class="modal">
+        <div class="containerGO">
+
+            <div class="containerGO-board">
+                <img src="img/go.png" alt="Instrucions" />
+            </div>
+
+            <div class="containerGO-nrr" >
+                <input id="leaveGame" type="image" src="img/nrr.png" alt="nrr" />
+            </div>
+
+            <div class="containerGO-rr" >
+                    <input id="startOver" type="image" src="img/rr.png" alt="rr" />
+            </div>
 
         </div>
 

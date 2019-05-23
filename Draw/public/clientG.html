@@ -1,8 +1,12 @@
 <html>
 <head>
 <link rel="stylesheet" type="text/css" href="guess.css">
+<link rel="stylesheet" type="text/css" href="popupCSS.css">
+
 <script src="socket.io/socket.io.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
 <script src="clientG.js"></script>
+<script src="popup.js"></script>
 </head>
 
 <body>
@@ -10,13 +14,13 @@
     <div class="containerCanvas">
 
         <div class='settings'>
-            <img  src="img/definicoes.png" alt="Settings" />
+            <!-- <img  src="img/definicoes.png" alt="Settings" /> -->
+            <input id="menuP" type="image" src="img/definicoes.png" alt="Draw_Submit" />
         </div>
 
         <div class='done'>
-                <img  src="img/done.png" alt="" />
+                <input id="done" type="image" src="img/done.png" alt="Done" />
         </div>
-
         <!--
         <div class='erase'>
                 <img class='lifes' src="img/erase.png" alt="Erase" />
@@ -28,14 +32,171 @@
     <div class="containerControlPanel">
 
         <div class='lifes_a'>
-            <img class='lifes' src="img/life.png" alt="" />
-            <img class='lifes' src="img/life.png" alt="" />
-            <img class='lifes' src="img/life.png" alt="" />
+            <img class='lifes' id="lf1" src="img/life.png" alt="" />
+            <img class='lifes' id="lf2" src="img/life.png" alt="" />
+            <img class='lifes' id="lf3" src="img/life.png" alt="" />
             <img class='help' src="img/number.png" alt="" />
             <img class='help' src="img/letra.png" alt="" />
-            <img class='desc_help' src="img/desc_number.png" alt="" />
-            <img class='desc_help' src="img/desc_letra.png" alt="" />
+            <img class='desc_help' src="img/desc_number_v2.png" alt="" />
+            <img class='desc_help' src="img/desc_letra_v2.png" alt="" />
         </div>
+    </div>
+
+    <!-- SOPA DE LETRAS -->
+    <div class="containerLetters">
+        <div class="sopa">
+          <div id="row">
+            <div class="empty" id="r0" ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)">
+
+            </div>
+
+            <div class="empty" id="r1" ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)">
+
+              </div>
+
+            <div class="empty" id="r2" ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)">
+
+            </div>
+
+            <div class="empty" id="r3" ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)">
+
+            </div>
+
+        <div class="empty" id="r4" ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)">
+
+        </div>
+
+        <div class="empty" id="r5" ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)">
+
+        </div>
+
+        <div class="empty" id="r6" ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)">
+
+        </div>
+
+        <div class="empty" id="r7" ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)">
+
+        </div>
+
+        <div class="empty" id="r8" ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)">
+
+        </div>
+        <div class="empty" id="r9" ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)">
+
+        </div>
+
+        <div class="empty" id="r10" ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)">
+
+        </div>
+        <div class="empty" id="r11" ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)">
+
+    </div>
+
+    <div class="empty" id="r12" ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)">
+
+    </div>
+
+    </div>
+      <div id="row">
+
+
+        <div class="empty" id="r13" ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)">
+
+        </div>
+
+
+    <div class="empty" id="r14" ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)">
+
+    </div>
+
+    <div class="empty" id="r15" ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)">
+          </div>
+
+    <div class="empty" id="r16" ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)">
+
+    </div>
+    <div class="empty" id="r17" ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)">
+
+    </div>
+
+    <div class="empty" id="r18" ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)">
+
+    </div>
+    <div class="empty" id="r19" ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)">
+
+    </div>
+    <div class="empty" id="r20" ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)">
+
+    </div>
+    <div class="empty" id="r21" ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)">
+
+    </div>
+    <div class="empty" id="r22" ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)">
+
+    </div>
+    <div class="empty" id="r23" ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)">
+
+    </div>
+    <div class="empty" id="r24" ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)">
+    </div>
+    <div class="empty" id="r25" ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)">
+    </div>
+      </div>
+        </div>
+
+        <div class="word">
+          <div id="row">
+  <div id='i0' class="emptyW" ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)">
+  </div>
+
+  <div id='i1' class="emptyW" ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)">
+  </div>
+
+  <div id='i2' class="emptyW" ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)">
+  </div>
+
+  <div id='i3' class="emptyW" ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)">
+  </div>
+
+  <div id='i4' class="emptyW" ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)">
+  </div>
+
+  <div id='i5' class="emptyW" ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)">
+  </div>
+
+  <div id='i6' class="emptyW" ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)">
+  </div>
+
+  <div id='i7' class="emptyW" ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)">
+    </div>
+
+    <div id='i8' class="emptyW" ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)">
+    </div>
+
+    <div id='i9' class="emptyW" ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)">
+    </div>
+
+    <div id='i10' class="emptyW" ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)">
+    </div>
+
+    <div id='i11' class="emptyW" ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)">
+    </div>
+
+    <div id='i12' class="emptyW" ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)">
+    </div>
+    <div id='i13' class="emptyW" ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)">
+    </div>
+    <div id='i14' class="emptyW" ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)">
+    </div>
+    <div id='i15' class="emptyW" ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)">
+    </div>
+    <div id='i16' class="emptyW" ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)">
+    </div>
+    <div id='i17' class="emptyW" ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)">
+    </div>
+</div>
+        </div>
+
     </div>
 
 
@@ -44,6 +205,108 @@
     <div >
         <img class='board' src="img/guess_board.png" alt="" />
     </div>
+
+
+    <!-- result POPUP content -->
+    <div id="tryAgain" class="modal">
+            <div class="containerPos">
+
+                <div class="modal-content">
+                    <img src="img/sound-try-again.png" id="continuePlay" alt="Instrucions" />
+                </div>
+
+            </div>
+
+        </div>
+    <!-- result POPUP content -->
+    <div id="resultpop" class="modal">
+            <div class="containerSound">
+
+                    <div class="containerSound-board">
+                            <img src="img/sound-board.png" alt="Instrucions" />
+                    </div>
+
+                <div class="containerSound-PA">
+                    <img src="img/congrats.png" alt="Instrucions" />
+                </div>
+
+                <div class="containerSound-done" >
+                    <input id="closeit" type="image" src="img/sound-check.png" alt="Intro_Submit" />
+                </div>
+
+            </div>
+
+        </div>
+
+
+    <!-- POPUP content -->
+   <div id="myModal" class="modal">
+            <div class="containerPos">
+
+                <div class="modal-content">
+                    <img src="img/guess_intro.png" alt="Instrucions" />
+                </div>
+
+                <div class="continue">
+                    <input id="closeBtn" type="image" src="img/continue_intro.png" alt="Intro_Submit" disabled />
+                </div>
+
+            </div>
+
+        </div>
+
+        <div id="menuDef" class="modal">
+                <div class="containerMenu">
+
+                    <div class="menuDef-content">
+                        <img src="img/menu-fundo.png" alt="Instrucions" />
+                    </div>
+
+                    <div class="menuMenu">
+                        <form action="/menu" method="GET">
+                            <input id="" type="image" size="1" src="img/menu-menu.png" alt="Intro_Submit" />
+                        </form>
+                    </div>
+
+                    <div class="menuRestart">
+                            <input id="" type="image" src="img/menu-restart.png" alt="Intro_Submit" />
+                    </div>
+
+                    <div class="menuLeave">
+                        <input id="leaveBtn" type="image" src="img/menu-leave.png" alt="Intro_Submit" />\
+                    </div>
+
+                    <div class="menuInstru">
+                            <input id="myBtn" type="image" src="img/menu-instru.png" alt="Intro_Submit" />
+                    </div>
+                    <div class="containerMenuX">
+                        <div class="menuX">
+                            <input id="menuX" type="image" src="img/menu-x.png" alt="Intro_Submit" />
+                        </div>
+                    </div>
+            </div>
+
+        </div>
+
+        <!-- GAME OVER -->
+    <div id="gameOVER" class="modal">
+            <div class="containerGO">
+
+                <div class="containerGO-board">
+                    <img src="img/go.png" alt="Instrucions" />
+                </div>
+
+                <div class="containerGO-nrr" >
+                    <input id="leaveGame" type="image" src="img/nrr.png" alt="nrr" />
+                </div>
+
+                <div class="containerGO-rr" >
+                        <input id="startOver" type="image" src="img/rr.png" alt="rr" />
+                </div>
+
+            </div>
+
+        </div>
 
 </body>
 </html>

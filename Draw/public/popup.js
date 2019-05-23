@@ -1,7 +1,7 @@
-var modal, btn, span, menuP, menuX, menuRender,sound, playAgain, inputDraw, soundChose ;
+var modal, btn, span, menuP, menuX, menuRender,sound, playAgain, inputDraw, soundChose, go;
 
 (function()
-{	
+{
     window.addEventListener("load", main);
 
 }());
@@ -12,7 +12,10 @@ function main() {
   menuRender = document.getElementById("menuDef");
   playAgain = document.getElementById("playAgain");
   inputDraw = document.getElementById("inputDraw");
-  
+
+
+  go = document.getElementById("gameOVER");  //-------------------------------------------->AQUI
+
   //Continuar nas instruções
   span = document.getElementById("closeBtn");;
   span.addEventListener("click", ctn);
@@ -32,42 +35,54 @@ function main() {
   //Botão de sair do manu
   menuX = document.getElementById("menuX");
   menuX.addEventListener("click",exitMenu);
-  
-  //Botão de escolher musica
-  soundChose = document.getElementById("soundChose");
-  soundChose.addEventListener("click",writeDrawName);
+
+
+
+  if (window.location.pathname == '/draw'){
+    //Botão de escolher musica
+    //console.log("estou a escolher o som"+window.location.pathname);
+    soundChose = document.getElementById("soundChose");
+    soundChose.addEventListener("click",writeDrawName);
+  }
+
 
   modal.style.display = "block";
 
- 
+
 //   menuPC.addEventListener("click", menuClose);
 //   window.addEventListener("click", fora);
 
 }
-    // When the user clicks the button, open the modal 
+    // When the user clicks the button, open the modal
   function instru() {
     menuRender.style.display = "none";
     modal.style.display = "block";
   }
-  
+
   function ctn() {
     modal.style.display = "none";
-    inputDraw.style.display = "none";
-    playAgain.style.display = "block";
-    sound.style.display = "block"; 
+    if (window.location.pathname == '/draw'){
+      inputDraw.style.display = "none";
+      playAgain.style.display = "block";
+      sound.style.display = "block";
+    }
   }
-  
+
   function menu() {
-    menuRender.style.display = "block";
+    // menuRender.style.display = "block";
+    go.style.display = "block";    //----------------------------------------->AQUI
+
   }
   function exitMenu() {
     menuRender.style.display = "none";
   }
 
   function writeDrawName(){
-    playAgain.style.display = "none"; 
-    inputDraw.style.display = "block";   
+    console.log("mudo de modal");
+    playAgain.style.display = "none";
+    inputDraw.style.display = "block";
   }
+
 
 
 
@@ -75,7 +90,7 @@ function main() {
   function leave(){
     var m = confirm("Are you sure you want to leave the game?");
   }
-  
+
 //   function () {
 //     menuP.style.display = "none";
 //   }
@@ -86,5 +101,3 @@ function main() {
 //       modal.style.display = "none";
 //     }
 // }
-
-

@@ -17,7 +17,7 @@
     position:absolute;
     display: grid;
     grid-template-columns: [col1] 30vw [col2] 13vw [col3] 17vw [col4] 12vw [col5];
-    grid-template-rows: [line1] 5vh [line2] 58vh [line3] 10vh [line4] 10vh [line5];
+    grid-template-rows: [line1] 5vh [line2] 65vh [line3] 10vh [line4] 10vh [line5];
 
 }
 
@@ -218,4 +218,64 @@ input[type="text"]{
     
 }
 
+
+
+
+
+
+.containerGO {
+    position:absolute;
+    display: grid;
+    grid-template-columns: [cl1] 33vw [cl2] 8vw [cl3] 5vw [cl4] 10vw [cl5] 6vw [cl6] 7vw [cl7] 3vw [cl8];
+    grid-template-rows: [ln1] 30vh [ln2] 7vh [ln3] 9vh [ln4] 2vh [ln5] 7.4vh [ln6];
+}
+
+.containerGO-board{
+    grid-column: cl2 / cl7;
+    grid-row: ln2 / ln5;
+    z-index: 3;
+     /* border: 1px solid #000;  */
+}
+
+.containerGO-rr{
+    float: left;
+    grid-column: cl5 / cl6;
+    grid-row: ln5/ ln6;
+    z-index: 3;
+    /* border: 1px solid #000; */
+}
+
+.containerGO-nrr{
+    float: left;
+    grid-column: cl3 / cl4;
+    grid-row: ln5/ ln6;
+    z-index: 3;
+    /* border: 1px solid #000; */
+}
+
+.containerGO-rr input{
+    width: 100%;
+    border: 0 none; 
+    outline: 0;
+}
+
+.containerGO-rr #soundChose2{
+    float: right;
+    
+}
+
+.containerGO-nrr input{
+    width: 100%;
+    border: 0 none; 
+    outline: 0;
+}
+
+.containerGO-nrr #soundChose2{
+    float: right;
+    
+}
+
+.containerGO-board img{
+    width: 100%;
+}
 
