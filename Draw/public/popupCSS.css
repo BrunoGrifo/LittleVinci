@@ -17,7 +17,7 @@
     position:absolute;
     display: grid;
     grid-template-columns: [col1] 30vw [col2] 13vw [col3] 17vw [col4] 12vw [col5];
-    grid-template-rows: [line1] 5vh [line2] 65vh [line3] 10vh [line4] 10vh [line5];
+    grid-template-rows: [line1] 5vh [line2] 61vh [line3] 10vh [line4] 10vh [line5];
 
 }
 
