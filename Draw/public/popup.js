@@ -69,8 +69,8 @@ function main() {
   }
 
   function menu() {
-    // menuRender.style.display = "block";
-    go.style.display = "block";    //----------------------------------------->AQUI
+    menuRender.style.display = "block";
+    //go.style.display = "block";    //----------------------------------------->AQUI
 
   }
   function exitMenu() {

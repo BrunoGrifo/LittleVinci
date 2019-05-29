@@ -90,6 +90,7 @@
 }
 
 .lifes_a .help input{
+    padding-top: 3vh;
     margin-left: 37%;
     width: 25%;
     border: 0 none;
