@@ -63,7 +63,13 @@ document.addEventListener("DOMContentLoaded", function() {
       var line = data.line;
       context.beginPath();
       context.moveTo(line[0].x * canvas.width, line[0].y * canvas.height);
+      //desenha um circulo
+      //context.arc(line[1].x * canvas.width, line[1].y * canvas.height, 10, 0, Math.PI * 2);
       context.lineTo(line[1].x * canvas.width, line[1].y * canvas.height);
+      context.lineWidth = 15;
+      context.lineHeight = 15;
+      context.opacity = 0.5;
+       context.strokeStyle = "white";
       context.stroke();
    });
 
