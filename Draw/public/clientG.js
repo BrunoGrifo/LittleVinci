@@ -176,9 +176,7 @@ function clickHelp1(){
       var id= "t"+i;
       //console.log(aux2);
       div = document.getElementById(id);
-      var str = " ___ ";
-      var result = str.fontcolor("white");
-      div.innerHTML = result;
+      div.style.background = 'url(img/traço.png) center' ;
     }
 }
 

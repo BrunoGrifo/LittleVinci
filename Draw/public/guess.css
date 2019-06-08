@@ -123,171 +123,16 @@
     grid-column: cl2 / cl3;
     grid-row: ln4 / ln5;
     z-index: 2;
-    border: 1px solid rgb(255, 255, 255);
+    /*border: 1px solid rgb(255, 255, 255);*/
 }
 
 .help{
   grid-column: cl2 / cl3;
   grid-row: ln5 / ln6;
   z-index: 2;
-  border: 1px solid rgb(255, 255, 255);
+  /*border: 1px solid rgb(255, 255, 255);*/
 }
 
-
-/*
-#r{
-  background: url('LETRAS/r.png');
-  background-repeat: no-repeat;
-  background-size: 30px 30px;
-  background-position: center;
-}
-
-#s{
-  background: url('LETRAS/s.png');
-  background-repeat: no-repeat;
-  background-size: 30px 30px;
-  background-position: center;
-}
-
-#t{
-  background: url('LETRAS/t.png');
-  background-repeat: no-repeat;
-  background-size: 30px 30px;
-  background-position: center;
-}
-#u{
-  background: url('LETRAS/u.png');
-  background-repeat: no-repeat;
-  background-size: 30px 30px;
-  background-position: center;
-}
-#v{
-  background: url('LETRAS/v.png');
-  background-repeat: no-repeat;
-  background-size: 30px 30px;
-  background-position: center;
-}
-#x{
-  backgrounde: url('LETRAS/x.png');
-  background-repeat: no-repeat;
-  background-size: 30px 30px;
-  background-position: center;
-}
-#z{
-  background: url('LETRAS/z.png');
-  background-repeat: no-repeat;
-  background-size: 30px 30px;
-  background-position: center;
-}
-#i{
-  background: url('LETRAS/i.png');
-  background-repeat: no-repeat;
-  background-size: 30px 30px;
-  background-position: center;
-}
-#j{
-  background: url('LETRAS/j.png');
-  background-repeat: no-repeat;
-  background-size: 30px 30px;
-  background-position: center;
-}
-#k{
-  background: url('LETRAS/k.png');
-  background-repeat: no-repeat;
-  background-size: 30px 30px;
-  background-position: center;
-}
-#l{
-  background: url('LETRAS/l.png');
-  background-repeat: no-repeat;
-  background-size: 30px 30px;
-  background-position: center;
-}
-#m{
-  background: url('LETRAS/m.png');
-  background-repeat: no-repeat;
-  background-size: 30px 30px;
-  background-position: center;
-}
-#n{
-  background: url('LETRAS/n.png');
-  background-repeat: no-repeat;
-  background-size: 30px 30px;
-  background-position: center;
-}
-#o{
-  background: url('LETRAS/o.png');
-  background-repeat: no-repeat;
-  background-size: 30px 30px;
-  background-position: center;
-}
-#p{
-  background: url('LETRAS/p.png');
-  background-repeat: no-repeat;
-  background-size: 30px 30px;
-  background-position: center;
-}
-#a{
-  background: url('LETRAS/a.png');
-  background-repeat: no-repeat;
-  background-size: 30px 30px;
-  background-position: center;
-}
-#b{
-  background: url('LETRAS/b.png');
-  background-repeat: no-repeat;
-  background-size: 30px 30px;
-  background-position: center;
-}
-#c{
-  background: url('LETRAS/c.png');
-  background-repeat: no-repeat;
-  background-size: 30px 30px;
-  background-position: center;
-}
-#d{
-  background: url('LETRAS/d.png');
-  background-repeat: no-repeat;
-  background-size: 30px 30px;
-  background-position: center;
-}
-#e{
-  background: url('LETRAS/e.png');
-  background-repeat: no-repeat;
-  background-size: 30px 30px;
-  background-position: center;
-}
-#f{
-  background: url('LETRAS/f.png');
-  background-repeat: no-repeat;
-  background-size: 30px 30px;
-  background-position: center;
-}
-#g{
-  background: url('LETRAS/g.png');
-  background-repeat: no-repeat;
-  background-size: 30px 30px;
-  background-position: center;
-}
-#h{
-  background: url('LETRAS/h.png');
-  background-repeat: no-repeat;
-  background-size: 30px 30px;
-  background-position: center;
-}
-#y{
-  background: url('LETRAS/y.png');
-  background-repeat: no-repeat;
-  background-size: 30px 30px;
-  background-position: center;
-}
-#w{
-  background: url('LETRAS/w.png');
-  background-repeat: no-repeat;
-  background-size: 30px 30px;
-  background-position: center;
-}
-*/
 .fill {
   /*background-image: url('LETRAS/botões-33.png');
   */position: relative;
@@ -318,6 +163,18 @@
   margin-top: 4px;
   /*margin-left: 2px;
   margin-right: 2px;*/
+  /*border: solid 1px salmon;
+  /*background: white;*/
+}
+
+.emptyT {
+  display: inline-block;
+  height: 4px;
+  width: 30px;
+  margin-left: 5px;
+  margin-right:5px;
+  margin-bottom: 5px;
+  /*margin-right: 2px;*/
   /*border: solid 1px salmon;
   /*background: white;*/
 }
