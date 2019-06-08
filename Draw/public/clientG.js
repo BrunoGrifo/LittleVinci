@@ -107,7 +107,7 @@ var ready;
                  });
                });
 
-               var lives=3;
+
                $(function(){
                    $('#done').click(function(e) {
                        e.preventDefault();
@@ -140,18 +140,9 @@ var ready;
                            if(result.valid == false)
                            {
                               console.log('\'you suck');
-
-                              var lifeId = "lf"+lives;
-                             if(lives > 1){
                                $('#tryAgain').show(result);
-                               lives--;
                                document.getElementById(lifeId).src="img/life_used.png";
-                             }
-                             else{
-                               socket.emit('game_over', { game : true });
-                               $('#gameOVER').show(result);
-                               console.log('\'you lost noob');
-                             }
+
                            }
                            else
                            {
