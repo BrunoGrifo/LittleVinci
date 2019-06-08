@@ -109,7 +109,7 @@
     position:absolute;
     display: grid;
     grid-template-columns: [cl1] 12vw [cl2] 56vw [cl3];
-    grid-template-rows: [ln1] 59vh [ln2] 16vh [ln3] 2vh [ln4] 5vh [ln5];
+    grid-template-rows: [ln1] 59vh [ln2] 16vh [ln3] 2vh [ln4] 5vh [ln5] 1vh [ln6];
 }
 
 .sopa{
@@ -123,14 +123,14 @@
     grid-column: cl2 / cl3;
     grid-row: ln4 / ln5;
     z-index: 2;
-    /*border: 2px solid rgb(255, 255, 255);*/
+    border: 1px solid rgb(255, 255, 255);
 }
 
 .help{
   grid-column: cl2 / cl3;
-  grid-row: ln7 / ln8;
+  grid-row: ln5 / ln6;
   z-index: 2;
-  /*border: 2px solid rgb(255, 255, 255);*/
+  border: 1px solid rgb(255, 255, 255);
 }
 
 
