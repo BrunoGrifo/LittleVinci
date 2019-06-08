@@ -111,6 +111,12 @@ document.addEventListener("DOMContentLoaded", function() {
                   else{
                     // Create the inner div before appending to the body
                     var innerDiv = document.createElement('div');
+                    var str = letter[1].toUpperCase();
+                    var result = str.fontcolor("white");
+                    innerDiv.style.fontFamily = "tox";
+                    innerDiv.innerHTML = result;
+                    /*
+                    innerDiv.inn
                     innerDiv.setAttribute("class", "fill");
                     innerDiv.setAttribute("id", "p"+letter[0]);
                     innerDiv.setAttribute("draggable", "true");
@@ -118,7 +124,8 @@ document.addEventListener("DOMContentLoaded", function() {
                     innerDiv.setAttribute("ondragstart", "start(event)");
                     innerDiv.setAttribute("ondragend", "end(event)");
                     innerDiv.style.background = 'url(LETRAS/'+letter[1]+'.png) no-repeat center';
-                    innerDiv.style.backgroundSize = "12.5px 12.5px";
+                    innerDiv.style.backgroundSize = "20px 15px";
+                    */
                     div.appendChild(innerDiv);
                   }
 

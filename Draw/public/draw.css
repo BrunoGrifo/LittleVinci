@@ -116,7 +116,7 @@
     grid-column: c2 / c3;
     grid-row: l2 / l3;
     z-index: 2;
-    border: 2px solid rgb(255, 255, 255);
+    /*border: 2px solid rgb(255, 255, 255);*/
     display: table-row;
 }
 
@@ -128,23 +128,27 @@
         background-position: left top;
       }
 
-      .fill {
+.fill {
   /*background-image: url('LETRAS-20190516T145633Z-001/LETRAS/botões-33.png');*/
   position: relative;
-  height: 13px;
-  width: 13px;
+  height: 20px;
+  width: 15px;
   top: 0px;
   left: 0px;
-  cursor: pointer;
+  /*cursor: pointer;*/
 }
 .emptyW {
      display: inline-block;
-     height: 13px;
-     width: 10px;
+     height: 20px;
+     width: 15px;
      margin: 0px;
-     margin-top: 1px;
+     margin-top: 0px;
      /*margin-left: 2px;
      margin-right: 2px;*/
      /*border: solid 1px salmon;
      /*background: white;*/
+   }
+   @font-face {
+     font-family:"tox";
+     src: url("font/Tox_Typewriter_2.ttf") format("truetype");
    }
