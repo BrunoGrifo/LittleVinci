@@ -84,9 +84,10 @@
 }
 
 .lifes_a .help {
+
     margin-left: 15%;
     margin-top: 10%;
-    width: 25%
+    width: 5%
 }
 
 .lifes_a .desc_help {
@@ -116,7 +117,14 @@
     grid-column: cl2 / cl3;
     grid-row: ln4 / ln5;
     z-index: 2;
-    border: 2px solid rgb(255, 255, 255);
+    /*border: 2px solid rgb(255, 255, 255);*/
+}
+
+.help{
+  grid-column: cl2 / cl3;
+  grid-row: ln7 / ln8;
+  z-index: 2;
+  /*border: 2px solid rgb(255, 255, 255);*/
 }
 
 

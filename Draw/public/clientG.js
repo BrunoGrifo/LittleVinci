@@ -6,7 +6,13 @@ document.addEventListener("DOMContentLoaded", function() {
    var height  = window.innerHeight;
    var socket  = io.connect();
 
+   //ajuda help1
+   var help1 = document.getElementById("help1");
+   help1.addEventListener("click", clickHelp1);
 
+   //ajuda help2
+   var help2 = document.getElementById("help2");
+   help2.addEventListener("click", clickHelp2);
 
    menuResult = document.getElementById("resultpop");
    function exitDone() {
@@ -38,8 +44,10 @@ document.addEventListener("DOMContentLoaded", function() {
    });
 var ready;
    // get the ready signal from server
+
  socket.on('ready', function (data) {
       console.log("i was called:"+data.palavra);
+      global_word = data.palavra;
       createSoup(data.palavra);
       ready = data.ready;
       var buttonC = document.getElementById("closeBtn");
@@ -158,6 +166,66 @@ var ready;
 
 });
 
+let global_word;
+/**
+*Funçao que se executa quando clicko na help1 - GIVE NUMBER OF LETTERS
+**/
+function clickHelp1(){
+    var tamanho=global_word.length;
+    for(var i=0;i<tamanho;i++){
+      var id= "t"+i;
+      //console.log(aux2);
+      div = document.getElementById(id);
+      var str = " ___ ";
+      var result = str.fontcolor("white");
+      div.innerHTML = result;
+    }
+}
+
+
+/**
+*Funçao que se executa quando clicko na help2 - GIVE RANDOM LETTER
+**/
+function clickHelp2(){
+//FIRST CLEAR THE LETTERS THAT ARE PUT
+  for(var i=0;i<18;i++){
+    console.log("sou chamado");
+    var id= "i"+i;
+    //console.log(aux2);
+    var son = document.getElementById(id);
+    //console.log("what:"+son);
+    if(son.children.length > 0){
+      console.log(document.getElementById(son.childNodes[1].id));
+      for(var j=0;j<26;j++){
+        var id_aux= "r"+j;
+        var son_aux = document.getElementById(id_aux).children.length;
+        //console.log("what:"+son);
+        if(son_aux < 1){
+          document.getElementById(id_aux).appendChild(
+            document.getElementById(son.childNodes[1].id) );
+            break;
+        }
+      }
+    }
+  }
+    //TO-DO GIVE RANDOM LETTER
+    console.log("global word:"+global_word);
+    var random = Math.floor(Math.random()*global_word.length)
+    var random_letter = global_word.charAt(random);
+    console.log("posicao"+random+"random letter to give:"+random_letter);
+  for(var j=0;j<26;j++){
+    if(array_random[j]==random_letter){
+      id_soup = "l"+j;
+      id_word = "i"+random;
+      document.getElementById(id_word).appendChild(
+        document.getElementById(id_soup) );
+      break;
+    }
+  }
+
+
+}
+
 
 /**
 *Funçao que se executa quando clicko num elemento
@@ -166,7 +234,7 @@ function clickLetter(e) {
 
     var x = document.getElementById(e.target.id).parentNode.className;
     if(x=="emptyW"){
-      for(var i=0;i<25;i++){
+      for(var i=0;i<26;i++){
         var id= "r"+i;
         //console.log(aux2);
         var son = document.getElementById(id).children.length;
@@ -254,9 +322,12 @@ function drop(e){
 	e.target.appendChild(document.getElementById(elementoArrastrado)); // Coloca el elemento soltado sobre el elemento desde el que se llamo esta funcion
 }
 */
+var array=[];
+var array_random;
 function createSoup(palavra){
-  var array=[];
+
   //var string = String(palavra);
+  global_word = palavra;
   //colocar as letras num array
   palavra = palavra.split(' ').join('');
   array = [...palavra];
@@ -269,7 +340,7 @@ function createSoup(palavra){
     array.push(item);
   }
   console.log("sopinha:"+array);
-  var array_random= shuffleArray(array);
+  array_random = shuffleArray(array);
   console.log("sopinha com desordem: "+array_random);
   createSoupView(array_random);
 }
