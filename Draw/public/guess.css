@@ -83,16 +83,22 @@
     width: 18%;
 }
 
-.lifes_a .help {
+.lifes_a .help #help1{
 
-    margin-left: 15%;
-    margin-top: 10%;
-    width: 5%
+    margin-left: 35%;
+    margin-top: 5%;
+    width: 22%
+}
+.lifes_a .help #help2{
+
+  margin-left: 35%;
+  margin-top: 5%;
+  width: 22%
 }
 
 .lifes_a .desc_help {
     margin-left: 0%;
-    margin-left: 2%;
+    margin-left: 22%;
     width: 45%
 }
 
