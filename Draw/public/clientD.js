@@ -37,11 +37,26 @@ document.addEventListener("DOMContentLoaded", function() {
         }
    }
 
+   //Botão de sair do manu
+   closeit = document.getElementById("continuePlay");
+   closeit.addEventListener("click", exitPop);
+   var menuTryAgain = document.getElementById("tryAgain");
+   function exitPop() {
+     menuTryAgain.style.display = "none";
+   }
+
    // Game ended handler
  socket.on('gameWin', function (data) {
       if(data.game==true){
         var menuGameEnd = document.getElementById("gameEnd");
         menuGameEnd.style.display = "block";
+      }
+      else{
+        var str = data.guess;
+        var wordGuess = document.getElementById("wordGuess");
+        //innerDiv.setAttribute("class", "fill");
+        wordGuess.setAttribute("placeholder", str);
+        menuTryAgain.style.display = "block";
       }
       console.log("i was called:"+data.game);
 

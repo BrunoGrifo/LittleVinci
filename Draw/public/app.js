@@ -67,7 +67,8 @@ app.get('/word', function(req, res, next) {
     return res.send({ valid: true });
   }
   else{
-    return res.send({ valid: false });
+    io.emit('gameWin',{game: false , guess: guess });
+    return res.send({ valid: false});
   }
 //console.log(util.inspect(req, false, null));
 

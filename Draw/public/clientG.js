@@ -141,7 +141,7 @@ var ready;
                            {
                               console.log('\'you suck');
                                $('#tryAgain').show(result);
-                               document.getElementById(lifeId).src="img/life_used.png";
+                               //document.getElementById(lifeId).src="img/life_used.png";
 
                            }
                            else
