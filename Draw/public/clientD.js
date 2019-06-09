@@ -52,10 +52,14 @@ document.addEventListener("DOMContentLoaded", function() {
         menuGameEnd.style.display = "block";
       }
       else{
-        var str = data.guess;
+        var str ="Tentativa falhada: "+data.guess;
+        var result = str.fontcolor("white");
         var wordGuess = document.getElementById("wordGuess");
+        wordGuess.style.fontFamily = "tox";
+        wordGuess.style.fontSize = "x-large";
         //innerDiv.setAttribute("class", "fill");
-        wordGuess.setAttribute("placeholder", str);
+        wordGuess.innerHTML=result;
+        //wordGuess.setAttribute("text", str);
         menuTryAgain.style.display = "block";
       }
       console.log("i was called:"+data.game);
@@ -79,13 +83,14 @@ document.addEventListener("DOMContentLoaded", function() {
       context.beginPath();
       context.moveTo(line[0].x * canvas.width, line[0].y * canvas.height);
       //desenha um circulo
-      //context.arc(line[1].x * canvas.width, line[1].y * canvas.height, 10, 0, Math.PI * 2);
-      context.lineTo(line[1].x * canvas.width, line[1].y * canvas.height);
-      context.lineWidth = 15;
-      context.lineHeight = 15;
-      context.opacity = 0.5;
-       context.strokeStyle = "white";
-      context.stroke();
+      context.arc(line[1].x * canvas.width, line[1].y * canvas.height, 10, 0, Math.PI * 2);
+
+      /*context.lineTo(line[1].x * canvas.width, line[1].y * canvas.height);
+       //context.strokeStyle = "white";//if line
+       //context.stroke(); //if line*/
+       context.fillStyle = "white";
+       context.fill(); //if
+
    });
 
    // main loop, running every 25ms
@@ -129,6 +134,7 @@ document.addEventListener("DOMContentLoaded", function() {
                     var str = letter[1].toUpperCase();
                     var result = str.fontcolor("white");
                     innerDiv.style.fontFamily = "tox";
+                    innerDiv.style.fontSize = "xx-large";
                     innerDiv.innerHTML = result;
                     /*
                     innerDiv.inn

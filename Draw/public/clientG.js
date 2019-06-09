@@ -38,9 +38,14 @@ document.addEventListener("DOMContentLoaded", function() {
 	socket.on('draw_line', function (data) {
       var line = data.line;
       context.beginPath();
+      /*circulos para parecer nuvens xD*/
+      context.arc(line[1].x * canvas.width, line[1].y * canvas.height, 10, 0, Math.PI * 2);
+      context.fillStyle = "white";
+       context.fill(); //if circle
+      /* Line
       context.moveTo(line[0].x * canvas.width, line[0].y * canvas.height);
       context.lineTo(line[1].x * canvas.width, line[1].y * canvas.height);
-      context.stroke();
+      context.stroke();*/
    });
 var ready;
    // get the ready signal from server
