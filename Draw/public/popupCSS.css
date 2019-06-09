@@ -182,7 +182,7 @@
     grid-column: cl4 / cl6;
     grid-row: ln3 / ln4;
     z-index: 3;
-    /* border: 1px solid rgb(255, 255, 255);  */
+     /* border: 1px solid rgb(255, 255, 255);  */
 }
 input[type="text"]{
     background: transparent;
@@ -277,5 +277,17 @@ input[type="text"]{
 
 .containerGO-board img{
     width: 100%;
+}
+
+img{
+    border: 0 none; 
+    outline: 0;
+    /* border: 1px solid #000; */
+}
+
+input{
+    border: 0 none; 
+    outline: 0;
+    /* border: 1px solid #000; */
 }
 
